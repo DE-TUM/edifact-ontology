@@ -1,12 +1,12 @@
-@prefix : <https://purl.org/edifact-ontology#> .
+@prefix : <https://purl.org/edifact/ontology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://purl.org/edifact-ontology#> .
+@base <https://purl.org/edifact/ontology#> .
 
-<https://purl.org/edifact-ontology> rdf:type owl:Ontology .
+<https://purl.org/edifact/ontology> rdf:type owl:Ontology .
 
 #################################################################
 #    Annotation properties
@@ -36,22 +36,22 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                                               rdfs:subPropertyOf <https://purl.org/p2p-o/document#E-Invoice> .
 
 
-###  https://purl.org/edifact-ontology#EANCOM-Structure
-:EANCOM-Structure rdf:type owl:AnnotationProperty ;
-                  rdfs:subPropertyOf <https://purl.org/p2p-o/document#E-Invoice> .
+###  https://purl.org/edifact/ontology#EDIFACT-Structure
+:EDIFACT-Structure rdf:type owl:AnnotationProperty ;
+                   rdfs:subPropertyOf <https://purl.org/p2p-o/document#E-Invoice> .
 
 
-###  https://purl.org/edifact-ontology#InvoiceContent
+###  https://purl.org/edifact/ontology#InvoiceContent
 :InvoiceContent rdf:type owl:AnnotationProperty ;
                 rdfs:subPropertyOf <https://purl.org/p2p-o/document#E-Invoice> .
 
 
-###  https://purl.org/edifact-ontology#seeEANCOMD96A
-:seeEANCOMD96A rdf:type owl:AnnotationProperty ;
-               rdfs:label "seeEANCOMD96A"@en .
+###  https://purl.org/edifact/ontology#seeEDIFACT
+:seeEDIFACT rdf:type owl:AnnotationProperty ;
+            rdfs:label "seeEDIFACT"@en .
 
 
-###  https://purl.org/edifact-ontology#seeXML
+###  https://purl.org/edifact/ontology#seeXML
 :seeXML rdf:type owl:AnnotationProperty ;
         rdfs:label "seeXML"@en .
 
@@ -67,6 +67,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
 ###  https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#isPerformedBy
 <https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#isPerformedBy> rdf:type owl:ObjectProperty ;
                                                                                                    rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                                                   owl:inverseOf <https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#performsAgentRole> ;
                                                                                                    rdfs:domain <https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#AgentRole> ;
                                                                                                    rdfs:range <http://www.w3.org/ns/org#FormalOrganization> ;
                                                                                                    rdfs:comment "shows by which formal organization a agent role is performed"@en ;
@@ -76,6 +77,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
 ###  https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#isProvidedBy
 <https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#isProvidedBy> rdf:type owl:ObjectProperty ;
                                                                                                   rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                                                  owl:inverseOf <https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#providesAgentRole> ;
                                                                                                   rdfs:domain <https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#AgentRole> ;
                                                                                                   rdfs:range <https://purl.org/p2p-o/document#E-Invoice> ;
                                                                                                   rdfs:comment "shows by which E-Invoice an agent role is provided"@en ;
@@ -85,7 +87,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
 ###  https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#performsAgentRole
 <https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#performsAgentRole> rdf:type owl:ObjectProperty ;
                                                                                                        rdfs:subPropertyOf owl:topObjectProperty ;
-                                                                                                       owl:inverseOf <https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#isPerformedBy> ;
                                                                                                        rdfs:domain <http://www.w3.org/ns/org#FormalOrganization> ;
                                                                                                        rdfs:range <https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#AgentRole> ;
                                                                                                        rdfs:comment "shows which formal organization an agent role performs" ;
@@ -95,24 +96,23 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
 ###  https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#providesAgentRole
 <https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#providesAgentRole> rdf:type owl:ObjectProperty ;
                                                                                                        rdfs:subPropertyOf owl:topObjectProperty ;
-                                                                                                       owl:inverseOf <https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#isProvidedBy> ;
                                                                                                        rdfs:domain <https://purl.org/p2p-o/document#E-Invoice> ;
                                                                                                        rdfs:range <https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#AgentRole> ;
                                                                                                        rdfs:comment "shows which agnezt roles are provided by an invoice"@en ;
                                                                                                        rdfs:label "providesAgentRole"@en .
 
 
-###  https://purl.org/edifact-ontology#followsStandard
+###  https://purl.org/edifact/ontology#followsStandard
 :followsStandard rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf owl:topObjectProperty ;
                  owl:inverseOf :isStandardOf ;
                  rdfs:domain <https://purl.org/p2p-o/document#E-Invoice> ;
-                 rdfs:range :EANCOM-Structure ;
+                 rdfs:range :EDIFACT-Structure ;
                  rdfs:comment "shows the file standard resources the invoice has" ;
                  rdfs:label "followsStandard"@en .
 
 
-###  https://purl.org/edifact-ontology#hasInvoiceDetails
+###  https://purl.org/edifact/ontology#hasInvoiceDetails
 :hasInvoiceDetails rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf owl:topObjectProperty ;
                    owl:inverseOf :isInvoiceDetailsOf ;
@@ -122,16 +122,17 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                    rdfs:label "hasInvoiceDetails"@en .
 
 
-###  https://purl.org/edifact-ontology#hasItem
+###  https://purl.org/edifact/ontology#hasItem
 :hasItem rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf owl:topObjectProperty ;
+         owl:inverseOf :isItemOf ;
          rdfs:domain <https://purl.org/p2p-o/document#E-Invoice> ;
          rdfs:range <https://purl.org/p2p-o/item#Item> ;
          rdfs:comment "shows which items are included in an invoice"@en ;
          rdfs:label "hasItem"@en .
 
 
-###  https://purl.org/edifact-ontology#isInvoiceDetailsOf
+###  https://purl.org/edifact/ontology#isInvoiceDetailsOf
 :isInvoiceDetailsOf rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf owl:topObjectProperty ;
                     rdfs:domain :InvoiceDetails ;
@@ -140,10 +141,9 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                     rdfs:label "isInvoiceDetailsOf"@en .
 
 
-###  https://purl.org/edifact-ontology#isItemOf
+###  https://purl.org/edifact/ontology#isItemOf
 :isItemOf rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf owl:topObjectProperty ;
-          owl:inverseOf :hasItem ;
           rdfs:domain <https://purl.org/p2p-o/item#Item> ;
           rdfs:range <https://purl.org/p2p-o/document#E-Invoice> ;
           rdfs:comment "shows to which Invoice the item belongs"@en ,
@@ -151,12 +151,12 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
           rdfs:label "isItemOf"@en .
 
 
-###  https://purl.org/edifact-ontology#isStandardOf
+###  https://purl.org/edifact/ontology#isStandardOf
 :isStandardOf rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf owl:topObjectProperty ;
-              rdfs:domain :EANCOM-Structure ;
+              rdfs:domain :EDIFACT-Structure ;
               rdfs:range <https://purl.org/p2p-o/document#E-Invoice> ;
-              rdfs:comment "shows of which invoice the EANCOM Structure is"@en ;
+              rdfs:comment "shows of which invoice the EDIFACT Structure is"@en ;
               rdfs:label "isStandardOf"@en .
 
 
@@ -259,7 +259,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                                              :seeXML "D_3251" .
 
 
-###  https://purl.org/edifact-ontology#accountsReceivableNumber
+###  https://purl.org/edifact/ontology#accountsReceivableNumber
 :accountsReceivableNumber rdf:type owl:DatatypeProperty ;
                           rdfs:subPropertyOf :noteNumber ;
                           rdfs:domain <http://www.w3.org/ns/org#FormalOrganization> ;
@@ -269,7 +269,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                           :seeXML "Nummer_des_Forderungskontos" .
 
 
-###  https://purl.org/edifact-ontology#additionalPartnerIdentificationEANCode
+###  https://purl.org/edifact/ontology#additionalPartnerIdentificationEANCode
 :additionalPartnerIdentificationEANCode rdf:type owl:DatatypeProperty ;
                                         rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/identifier> ;
                                         rdfs:domain <http://www.w3.org/ns/org#FormalOrganization> ;
@@ -279,7 +279,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                                         :seeXML "Zusaetzliche_Partneridentifikation_EAN_Code" .
 
 
-###  https://purl.org/edifact-ontology#allowanceReason
+###  https://purl.org/edifact/ontology#allowanceReason
 :allowanceReason rdf:type owl:DatatypeProperty ;
                  rdfs:domain :InvoiceContent ;
                  rdfs:range xsd:string ;
@@ -288,7 +288,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                  :seeXML "Zuschlag" .
 
 
-###  https://purl.org/edifact-ontology#belongsToProcess
+###  https://purl.org/edifact/ontology#belongsToProcess
 :belongsToProcess rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf owl:topDataProperty ;
                   rdfs:domain <https://purl.org/p2p-o/document#E-Invoice> ;
@@ -298,7 +298,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                   :seeXML "ProcessIdentification" .
 
 
-###  https://purl.org/edifact-ontology#beneficiaryReference
+###  https://purl.org/edifact/ontology#beneficiaryReference
 :beneficiaryReference rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/identifier> ;
                       rdfs:domain <http://www.w3.org/ns/org#FormalOrganization> ;
@@ -308,7 +308,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                       :seeXML "Referenz_des_Beguenstigten" .
 
 
-###  https://purl.org/edifact-ontology#bilateralAgreed
+###  https://purl.org/edifact/ontology#bilateralAgreed
 :bilateralAgreed rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf owl:topDataProperty ;
                  rdfs:domain :InvoiceContent ;
@@ -318,7 +318,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                  :seeXML "Bilateral_vereinbart" .
 
 
-###  https://purl.org/edifact-ontology#calculationPeriod
+###  https://purl.org/edifact/ontology#calculationPeriod
 :calculationPeriod rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf :timePeriod ;
                    rdfs:domain :InvoiceContent ;
@@ -328,7 +328,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                    :seeXML "Abechnungszeitraum" .
 
 
-###  https://purl.org/edifact-ontology#changeInformation
+###  https://purl.org/edifact/ontology#changeInformation
 :changeInformation rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf owl:topDataProperty ;
                    rdfs:domain :InvoiceContent ;
@@ -338,7 +338,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                    :seeXML "Aenderungsinformationen" .
 
 
-###  https://purl.org/edifact-ontology#companyOrPlaceRegistristrationNumber
+###  https://purl.org/edifact/ontology#companyOrPlaceRegistristrationNumber
 :companyOrPlaceRegistristrationNumber rdf:type owl:DatatypeProperty ;
                                       rdfs:subPropertyOf :noteNumber ;
                                       rdfs:domain <http://www.w3.org/ns/org#FormalOrganization> ;
@@ -348,7 +348,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                                       :seeXML "Unternehmes_oder_Ort_Regisstriernummer" .
 
 
-###  https://purl.org/edifact-ontology#consumerUnitsInTradingUnitQuantity
+###  https://purl.org/edifact/ontology#consumerUnitsInTradingUnitQuantity
 :consumerUnitsInTradingUnitQuantity rdf:type owl:DatatypeProperty ;
                                     rdfs:subPropertyOf :quantity ;
                                     rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -358,7 +358,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                                     :seeXML "Anzahl_der_Verbrauchereinheiten_in_einer_Handelseinheit" .
 
 
-###  https://purl.org/edifact-ontology#consumerUnitsInTradingUnitQuantityWithUnit
+###  https://purl.org/edifact/ontology#consumerUnitsInTradingUnitQuantityWithUnit
 :consumerUnitsInTradingUnitQuantityWithUnit rdf:type owl:DatatypeProperty ;
                                             rdfs:subPropertyOf owl:topDataProperty ;
                                             rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -368,7 +368,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                                             :seeXML "Anzahl_der_Verbrauchereinheiten_in_einer_Handelseinheit" .
 
 
-###  https://purl.org/edifact-ontology#contactDepartmentPerson
+###  https://purl.org/edifact/ontology#contactDepartmentPerson
 :contactDepartmentPerson rdf:type owl:DatatypeProperty ;
                          rdfs:subPropertyOf :contactPersom ;
                          rdfs:domain <http://www.w3.org/ns/org#FormalOrganization> ;
@@ -378,7 +378,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                          :seeXML "D_3412" .
 
 
-###  https://purl.org/edifact-ontology#contactPersom
+###  https://purl.org/edifact/ontology#contactPersom
 :contactPersom rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf owl:topDataProperty ;
                rdfs:domain <http://www.w3.org/ns/org#FormalOrganization> ;
@@ -387,139 +387,139 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                rdfs:label "contactPerson"@en .
 
 
-###  https://purl.org/edifact-ontology#contactPersonAccounting
+###  https://purl.org/edifact/ontology#contactPersonAccounting
 :contactPersonAccounting rdf:type owl:DatatypeProperty ;
                          rdfs:subPropertyOf :contactPersom ;
                          rdfs:domain <http://www.w3.org/ns/org#FormalOrganization> ;
                          rdfs:range xsd:string ;
                          rdfs:comment "Department/person responsible for the accounts payable function within a corporation." ;
                          rdfs:label "contactPersonAccounting"@en ;
-                         :seeEANCOMD96A "CTA+AD" ;
+                         :seeEDIFACT "CTA+AD" ;
                          :seeXML "Ansprechpartner_Buchhaltung" .
 
 
-###  https://purl.org/edifact-ontology#contactPersonCreditorAccounting
+###  https://purl.org/edifact/ontology#contactPersonCreditorAccounting
 :contactPersonCreditorAccounting rdf:type owl:DatatypeProperty ;
                                  rdfs:subPropertyOf :contactPersom ;
                                  rdfs:domain <http://www.w3.org/ns/org#FormalOrganization> ;
                                  rdfs:range xsd:string ;
                                  rdfs:comment "Department/person responsible for the accounts payable function within a corporation" ;
                                  rdfs:label "contactPersonCreditorAccounting"@en ;
-                                 :seeEANCOMD96A "CTA+AP" ;
+                                 :seeEDIFACT "CTA+AP" ;
                                  :seeXML "Ansprechpartner_Kreditorenbuchhaltung" .
 
 
-###  https://purl.org/edifact-ontology#contactPersonEmailAddress
+###  https://purl.org/edifact/ontology#contactPersonEmailAddress
 :contactPersonEmailAddress rdf:type owl:DatatypeProperty ;
                            rdfs:subPropertyOf :contactPersom ;
                            rdfs:domain <http://www.w3.org/ns/org#FormalOrganization> ;
                            rdfs:range xsd:string ;
                            rdfs:comment "Creating/sending/receiving of unstructured free text messages or documents using computer network, a mini- computer or an attached modem and regular telephone line or other electronic transmission media." ;
                            rdfs:label "contactPersonEmailAddress"@en ;
-                           :seeEANCOMD96A "COM+:EM" ;
+                           :seeEDIFACT "COM+:EM" ;
                            :seeXML "Ansprechpartner_EmailAdresse" .
 
 
-###  https://purl.org/edifact-ontology#contactPersonFaxNumber
+###  https://purl.org/edifact/ontology#contactPersonFaxNumber
 :contactPersonFaxNumber rdf:type owl:DatatypeProperty ;
                         rdfs:subPropertyOf :contactPersom ;
                         rdfs:domain <http://www.w3.org/ns/org#FormalOrganization> ;
                         rdfs:range xsd:string ;
                         rdfs:comment "Device used for transmitting and reproducing fixed graphic material (as printing) by means of signals over telephone lines or other electronic transmission media." ;
                         rdfs:label "contactPersonFaxNumber"@en ;
-                        :seeEANCOMD96A "COM+:FX" ;
+                        :seeEDIFACT "COM+:FX" ;
                         :seeXML "Ansprechpartner_TelefaxNummer" .
 
 
-###  https://purl.org/edifact-ontology#contactPersonIncomingGoods
+###  https://purl.org/edifact/ontology#contactPersonIncomingGoods
 :contactPersonIncomingGoods rdf:type owl:DatatypeProperty ;
                             rdfs:subPropertyOf :contactPersom ;
                             rdfs:domain <http://www.w3.org/ns/org#FormalOrganization> ;
                             rdfs:range xsd:string ;
                             rdfs:comment "Department/person responsible for receiving the goods at the place of delivery." ;
                             rdfs:label "contactPersonIncomingGoods"@en ;
-                            :seeEANCOMD96A "CTA+GR" ;
+                            :seeEDIFACT "CTA+GR" ;
                             :seeXML "Ansprechpartner_Wareneingang" .
 
 
-###  https://purl.org/edifact-ontology#contactPersonInformation
+###  https://purl.org/edifact/ontology#contactPersonInformation
 :contactPersonInformation rdf:type owl:DatatypeProperty ;
                           rdfs:subPropertyOf :contactPersom ;
                           rdfs:domain <http://www.w3.org/ns/org#FormalOrganization> ;
                           rdfs:range xsd:string ;
                           rdfs:comment "Department/person to contact for questions regarding transactions" ;
                           rdfs:label "contactPersonInformation"@en ;
-                          :seeEANCOMD96A "COM+IC" ;
+                          :seeEDIFACT "COM+IC" ;
                           :seeXML "Ansprechpartner_Information" .
 
 
-###  https://purl.org/edifact-ontology#contactPersonPurchasingDepartment
+###  https://purl.org/edifact/ontology#contactPersonPurchasingDepartment
 :contactPersonPurchasingDepartment rdf:type owl:DatatypeProperty ;
                                    rdfs:subPropertyOf :contactPersom ;
                                    rdfs:domain <http://www.w3.org/ns/org#FormalOrganization> ;
                                    rdfs:range xsd:string ;
                                    rdfs:comment "Department/person responsible for issuing this purchase order." ;
                                    rdfs:label "contactPersonPurchasingDepartment"@en ;
-                                   :seeEANCOMD96A "CTA+PD" ;
+                                   :seeEDIFACT "CTA+PD" ;
                                    :seeXML "Ansprechpartner_Einkaufabteilung" .
 
 
-###  https://purl.org/edifact-ontology#contactPersonReceivableAccounting
+###  https://purl.org/edifact/ontology#contactPersonReceivableAccounting
 :contactPersonReceivableAccounting rdf:type owl:DatatypeProperty ;
                                    rdfs:subPropertyOf :contactPersom ;
                                    rdfs:domain <http://www.w3.org/ns/org#FormalOrganization> ;
                                    rdfs:range xsd:string ;
                                    rdfs:comment "Department/person responsible for the accounts receivable within a corporation" ;
                                    rdfs:label "contactPersonReceivableAccounting"@en ;
-                                   :seeEANCOMD96A "CTA+AR" ;
+                                   :seeEDIFACT "CTA+AR" ;
                                    :seeXML "Ansprechpartner_Debitorenbuchaltung" .
 
 
-###  https://purl.org/edifact-ontology#contactPersonSalesDepartment
+###  https://purl.org/edifact/ontology#contactPersonSalesDepartment
 :contactPersonSalesDepartment rdf:type owl:DatatypeProperty ;
                               rdfs:subPropertyOf :contactPersom ;
                               rdfs:domain <http://www.w3.org/ns/org#FormalOrganization> ;
                               rdfs:range xsd:string ;
                               rdfs:comment "The sales representative or department contact within an organization." ;
                               rdfs:label "contactPersonSalesDepartment"@en ;
-                              :seeEANCOMD96A "CTA+SR" ;
+                              :seeEDIFACT "CTA+SR" ;
                               :seeXML "Ansprechpartner_Verkaufsabteilung" .
 
 
-###  https://purl.org/edifact-ontology#contactPersonTelefonNumber
+###  https://purl.org/edifact/ontology#contactPersonTelefonNumber
 :contactPersonTelefonNumber rdf:type owl:DatatypeProperty ;
                             rdfs:subPropertyOf :contactPersom ;
                             rdfs:domain <http://www.w3.org/ns/org#FormalOrganization> ;
                             rdfs:range xsd:string ;
                             rdfs:comment "Voice/data transmission by telephone" ;
                             rdfs:label "contactPersonTelefonNumber"@en ;
-                            :seeEANCOMD96A "COM+:TE" ;
+                            :seeEDIFACT "COM+:TE" ;
                             :seeXML "Ansprechpartner_TelefonNummer" .
 
 
-###  https://purl.org/edifact-ontology#contactPersonTelexNumber
+###  https://purl.org/edifact/ontology#contactPersonTelexNumber
 :contactPersonTelexNumber rdf:type owl:DatatypeProperty ;
                           rdfs:subPropertyOf :contactPersom ;
                           rdfs:domain <http://www.w3.org/ns/org#FormalOrganization> ;
                           rdfs:range xsd:string ;
                           rdfs:comment "Transmission of text/data via telex." ;
                           rdfs:label "contactPersonTelexNumber"@en ;
-                          :seeEANCOMD96A "COM+:TL" ;
+                          :seeEDIFACT "COM+:TL" ;
                           :seeXML "Ansprechpartner_TelexNummer" .
 
 
-###  https://purl.org/edifact-ontology#contactPersonX400Number
+###  https://purl.org/edifact/ontology#contactPersonX400Number
 :contactPersonX400Number rdf:type owl:DatatypeProperty ;
                          rdfs:subPropertyOf :contactPersom ;
                          rdfs:domain <http://www.w3.org/ns/org#FormalOrganization> ;
                          rdfs:range xsd:string ;
                          rdfs:comment "CCITT Message handling system" ;
                          rdfs:label "contactPersonX400Number"@en ;
-                         :seeEANCOMD96A "COM+:XF" ;
+                         :seeEDIFACT "COM+:XF" ;
                          :seeXML "Ansprechpartner_X400Nummer" .
 
 
-###  https://purl.org/edifact-ontology#contractNumber
+###  https://purl.org/edifact/ontology#contractNumber
 :contractNumber rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf :noteNumber ;
                 rdfs:domain <http://www.w3.org/ns/org#FormalOrganization> ;
@@ -529,7 +529,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                 :seeXML "Vertragsnummer" .
 
 
-###  https://purl.org/edifact-ontology#contractNumberBuyer
+###  https://purl.org/edifact/ontology#contractNumberBuyer
 :contractNumberBuyer rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf :noteNumber ;
                      rdfs:domain <http://www.w3.org/ns/org#FormalOrganization> ;
@@ -539,36 +539,36 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                      :seeXML "Vertragsnummer_des_Kaeufers" .
 
 
-###  https://purl.org/edifact-ontology#controlSegmentBetweenItemAndTotalPart
+###  https://purl.org/edifact/ontology#controlSegmentBetweenItemAndTotalPart
 :controlSegmentBetweenItemAndTotalPart rdf:type owl:DatatypeProperty ;
-                                       rdfs:domain :EANCOM-Structure ;
+                                       rdfs:domain :EDIFACT-Structure ;
                                        rdfs:range xsd:string ;
                                        rdfs:comment "Detail/summary section separation" ;
                                        rdfs:label "controlSegmentBetweenItemAndTotalPart"@en ;
                                        :seeXML "D_0081" .
 
 
-###  https://purl.org/edifact-ontology#creationDate
+###  https://purl.org/edifact/ontology#creationDate
 :creationDate rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> ;
-              rdfs:domain :EANCOM-Structure ;
+              rdfs:domain :EDIFACT-Structure ;
               rdfs:range xsd:integer ;
               rdfs:comment "Date when the message was created" ;
               rdfs:label "creationDate"@en ;
               :seeXML "D_0017" .
 
 
-###  https://purl.org/edifact-ontology#creationTime
+###  https://purl.org/edifact/ontology#creationTime
 :creationTime rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf owl:topDataProperty ;
-              rdfs:domain :EANCOM-Structure ;
+              rdfs:domain :EDIFACT-Structure ;
               rdfs:range xsd:integer ;
               rdfs:comment "Time of the creation of the EDIFACT message" ;
               rdfs:label "creationTime"@en ;
               :seeXML "D_0019" .
 
 
-###  https://purl.org/edifact-ontology#creditNoteNumber
+###  https://purl.org/edifact/ontology#creditNoteNumber
 :creditNoteNumber rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf :noteNumber ;
                   rdfs:domain :InvoiceContent ;
@@ -578,7 +578,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                   :seeXML "Gutschriftsnummer" .
 
 
-###  https://purl.org/edifact-ontology#customsTariffNumber
+###  https://purl.org/edifact/ontology#customsTariffNumber
 :customsTariffNumber rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf :noteNumber ;
                      rdfs:domain :InvoiceContent ;
@@ -588,28 +588,28 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                      :seeXML "Zolltarifnummer" .
 
 
-###  https://purl.org/edifact-ontology#dataExchangeCounter
+###  https://purl.org/edifact/ontology#dataExchangeCounter
 :dataExchangeCounter rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf owl:topDataProperty ;
-                     rdfs:domain :EANCOM-Structure ;
+                     rdfs:domain :EDIFACT-Structure ;
                      rdfs:range xsd:string ;
                      rdfs:comment "the counter of the exchanged data" ;
                      rdfs:label "dataExchangeCounter"@en ;
-                     :seeEANCOMD96A 36 ;
+                     :seeEDIFACT 36 ;
                      :seeXML "D_0036" .
 
 
-###  https://purl.org/edifact-ontology#dataExchangeReference
+###  https://purl.org/edifact/ontology#dataExchangeReference
 :dataExchangeReference rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf owl:topDataProperty ;
-                       rdfs:domain :EANCOM-Structure ;
+                       rdfs:domain :EDIFACT-Structure ;
                        rdfs:range xsd:string ;
                        rdfs:comment "the reference of the exchanged data" ;
                        rdfs:label "dataExchangeReference"@en ;
                        :seeXML "D_0020" .
 
 
-###  https://purl.org/edifact-ontology#dateAccountsReceivableNumber
+###  https://purl.org/edifact/ontology#dateAccountsReceivableNumber
 :dateAccountsReceivableNumber rdf:type owl:DatatypeProperty ;
                               rdfs:subPropertyOf :referenceDate ;
                               rdfs:domain :InvoiceContent ;
@@ -619,7 +619,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                               :seeXML "Referenzdatum_Nummer_des_Forderungskontos" .
 
 
-###  https://purl.org/edifact-ontology#dateAdditionalPartnerIdentificationEANCode
+###  https://purl.org/edifact/ontology#dateAdditionalPartnerIdentificationEANCode
 :dateAdditionalPartnerIdentificationEANCode rdf:type owl:DatatypeProperty ;
                                             rdfs:subPropertyOf :referenceDate ;
                                             rdfs:domain :InvoiceContent ;
@@ -629,7 +629,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                                             :seeXML "Referenzdatum_Zusaetzliche_Partneridentifikation_EAN_Code" .
 
 
-###  https://purl.org/edifact-ontology#dateBeneficiaryReference
+###  https://purl.org/edifact/ontology#dateBeneficiaryReference
 :dateBeneficiaryReference rdf:type owl:DatatypeProperty ;
                           rdfs:subPropertyOf :referenceDate ;
                           rdfs:domain :InvoiceContent ;
@@ -639,7 +639,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                           :seeXML "Referenzdatum_Referenz_des_Beguenstigten" .
 
 
-###  https://purl.org/edifact-ontology#dateCompanyOrPlaceRegistristrationNumber
+###  https://purl.org/edifact/ontology#dateCompanyOrPlaceRegistristrationNumber
 :dateCompanyOrPlaceRegistristrationNumber rdf:type owl:DatatypeProperty ;
                                           rdfs:subPropertyOf :referenceDate ;
                                           rdfs:domain :InvoiceContent ;
@@ -649,7 +649,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                                           :seeXML "Referenzdatum_Unternehmes_oder_Ort_Regisstriernummer" .
 
 
-###  https://purl.org/edifact-ontology#dateContractNumber
+###  https://purl.org/edifact/ontology#dateContractNumber
 :dateContractNumber rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf :referenceDate ;
                     rdfs:domain :InvoiceContent ;
@@ -659,7 +659,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                     :seeXML "Referenzdatum_Vertragsnummer" .
 
 
-###  https://purl.org/edifact-ontology#dateContractNumberBuyer
+###  https://purl.org/edifact/ontology#dateContractNumberBuyer
 :dateContractNumberBuyer rdf:type owl:DatatypeProperty ;
                          rdfs:subPropertyOf :referenceDate ;
                          rdfs:domain :InvoiceContent ;
@@ -669,7 +669,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                          :seeXML "Referenzdatum_Vertragsnummer_des_Kaeufers" .
 
 
-###  https://purl.org/edifact-ontology#dateCreditNoteNumber
+###  https://purl.org/edifact/ontology#dateCreditNoteNumber
 :dateCreditNoteNumber rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf :referenceDate ;
                       rdfs:domain :InvoiceContent ;
@@ -679,7 +679,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                       :seeXML "Referenzdatum_Gutschriftsnummer" .
 
 
-###  https://purl.org/edifact-ontology#dateCustomsTariffNumber
+###  https://purl.org/edifact/ontology#dateCustomsTariffNumber
 :dateCustomsTariffNumber rdf:type owl:DatatypeProperty ;
                          rdfs:subPropertyOf :referenceDate ;
                          rdfs:domain :InvoiceContent ;
@@ -689,7 +689,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                          :seeXML "Referenzdatum_Zolltarifnummer" .
 
 
-###  https://purl.org/edifact-ontology#dateDebitNoteNumber
+###  https://purl.org/edifact/ontology#dateDebitNoteNumber
 :dateDebitNoteNumber rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf :referenceDate ;
                      rdfs:domain :InvoiceContent ;
@@ -699,7 +699,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                      :seeXML "Referenzdatum_Nummer_der_Belastungsanzeige" .
 
 
-###  https://purl.org/edifact-ontology#dateDeliveryNoteNumber
+###  https://purl.org/edifact/ontology#dateDeliveryNoteNumber
 :dateDeliveryNoteNumber rdf:type owl:DatatypeProperty ;
                         rdfs:subPropertyOf :referenceDate ;
                         rdfs:domain :InvoiceContent ;
@@ -709,7 +709,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                         :seeXML "Referenzdatum_Lieferscheinnummer" .
 
 
-###  https://purl.org/edifact-ontology#dateDespatchAdviceNumber
+###  https://purl.org/edifact/ontology#dateDespatchAdviceNumber
 :dateDespatchAdviceNumber rdf:type owl:DatatypeProperty ;
                           rdfs:subPropertyOf :referenceDate ;
                           rdfs:domain :InvoiceContent ;
@@ -719,7 +719,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                           :seeXML "Referenzdatum_Nummer_Lieferschein" .
 
 
-###  https://purl.org/edifact-ontology#dateExportReferenceNumber
+###  https://purl.org/edifact/ontology#dateExportReferenceNumber
 :dateExportReferenceNumber rdf:type owl:DatatypeProperty ;
                            rdfs:subPropertyOf :referenceDate ;
                            rdfs:domain :InvoiceContent ;
@@ -729,7 +729,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                            :seeXML "Referenzdatum_Exportreferenznummer" .
 
 
-###  https://purl.org/edifact-ontology#dateFileLineIdentifier
+###  https://purl.org/edifact/ontology#dateFileLineIdentifier
 :dateFileLineIdentifier rdf:type owl:DatatypeProperty ;
                         rdfs:subPropertyOf :referenceDate ;
                         rdfs:domain :InvoiceContent ;
@@ -739,7 +739,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                         :seeXML "Referenzdatum_Bezeichner_Dateizeilen" .
 
 
-###  https://purl.org/edifact-ontology#dateFinancialAccountNumberPayee
+###  https://purl.org/edifact/ontology#dateFinancialAccountNumberPayee
 :dateFinancialAccountNumberPayee rdf:type owl:DatatypeProperty ;
                                  rdfs:subPropertyOf :referenceDate ;
                                  rdfs:domain :InvoiceContent ;
@@ -749,7 +749,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                                  :seeXML "Referenzdatum_Kontonummer_des_Zahlungsempfaenger" .
 
 
-###  https://purl.org/edifact-ontology#dateFiscalNumber
+###  https://purl.org/edifact/ontology#dateFiscalNumber
 :dateFiscalNumber rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf :referenceDate ;
                   rdfs:domain :InvoiceContent ;
@@ -759,7 +759,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                   :seeXML "Referenzdatum_Steuernummer" .
 
 
-###  https://purl.org/edifact-ontology#dateGovernmentReferenceNumber
+###  https://purl.org/edifact/ontology#dateGovernmentReferenceNumber
 :dateGovernmentReferenceNumber rdf:type owl:DatatypeProperty ;
                                rdfs:subPropertyOf :referenceDate ;
                                rdfs:domain :InvoiceContent ;
@@ -769,7 +769,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                                :seeXML "Referenzdatum_Referenznummer_Regierung" .
 
 
-###  https://purl.org/edifact-ontology#dateHarmonisedSystemNumber
+###  https://purl.org/edifact/ontology#dateHarmonisedSystemNumber
 :dateHarmonisedSystemNumber rdf:type owl:DatatypeProperty ;
                             rdfs:subPropertyOf :referenceDate ;
                             rdfs:domain :InvoiceContent ;
@@ -779,7 +779,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                             :seeXML "Referenzdatum_Nummer_harmonisiertes_System" .
 
 
-###  https://purl.org/edifact-ontology#dateImportLicenseNumber
+###  https://purl.org/edifact/ontology#dateImportLicenseNumber
 :dateImportLicenseNumber rdf:type owl:DatatypeProperty ;
                          rdfs:subPropertyOf :referenceDate ;
                          rdfs:domain :InvoiceContent ;
@@ -789,7 +789,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                          :seeXML "Referenzdatum_Import_Lizenznummer"@de .
 
 
-###  https://purl.org/edifact-ontology#dateInternalCustomerNumber
+###  https://purl.org/edifact/ontology#dateInternalCustomerNumber
 :dateInternalCustomerNumber rdf:type owl:DatatypeProperty ;
                             rdfs:subPropertyOf :referenceDate ;
                             rdfs:domain :InvoiceContent ;
@@ -799,7 +799,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                             :seeXML "Referenzdatum_Interne_Kundennummer" .
 
 
-###  https://purl.org/edifact-ontology#dateInternalVendorNumber
+###  https://purl.org/edifact/ontology#dateInternalVendorNumber
 :dateInternalVendorNumber rdf:type owl:DatatypeProperty ;
                           rdfs:subPropertyOf :referenceDate ;
                           rdfs:domain :InvoiceContent ;
@@ -809,7 +809,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                           :seeXML "Referenzdatum_Interne_Lieferantennummer" .
 
 
-###  https://purl.org/edifact-ontology#dateInvoiceNumber
+###  https://purl.org/edifact/ontology#dateInvoiceNumber
 :dateInvoiceNumber rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf :referenceDate ;
                    rdfs:domain :InvoiceContent ;
@@ -819,7 +819,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                    :seeXML "Referenzdatum_Rechnungsnummer" .
 
 
-###  https://purl.org/edifact-ontology#dateLineItemReferenceNumber
+###  https://purl.org/edifact/ontology#dateLineItemReferenceNumber
 :dateLineItemReferenceNumber rdf:type owl:DatatypeProperty ;
                              rdfs:subPropertyOf :referenceDate ;
                              rdfs:domain :InvoiceContent ;
@@ -829,7 +829,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                              :seeXML "Referenzdatum_Referenznummer_der_Position" .
 
 
-###  https://purl.org/edifact-ontology#dateNumberConsolidatedInvoiceEANCode
+###  https://purl.org/edifact/ontology#dateNumberConsolidatedInvoiceEANCode
 :dateNumberConsolidatedInvoiceEANCode rdf:type owl:DatatypeProperty ;
                                       rdfs:subPropertyOf :referenceDate ;
                                       rdfs:domain :InvoiceContent ;
@@ -839,7 +839,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                                       :seeXML "Referenzdatum_Nummer_einr_konsolidierten_Rechnung_EAN_Code" .
 
 
-###  https://purl.org/edifact-ontology#dateNumberOfBundleMessages
+###  https://purl.org/edifact/ontology#dateNumberOfBundleMessages
 :dateNumberOfBundleMessages rdf:type owl:DatatypeProperty ;
                             rdfs:subPropertyOf :referenceDate ;
                             rdfs:domain :InvoiceContent ;
@@ -849,7 +849,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                             :seeXML "Referenzdatum_Nummer_eines_Buendels_von_Nachrichten" .
 
 
-###  https://purl.org/edifact-ontology#dateOfferNumber
+###  https://purl.org/edifact/ontology#dateOfferNumber
 :dateOfferNumber rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf :referenceDate ;
                  rdfs:domain :InvoiceContent ;
@@ -859,7 +859,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                  :seeXML "Referenzdatum_Angebotsnummer" .
 
 
-###  https://purl.org/edifact-ontology#dateOrderNumberBuyer
+###  https://purl.org/edifact/ontology#dateOrderNumberBuyer
 :dateOrderNumberBuyer rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf :referenceDate ;
                       rdfs:domain :InvoiceContent ;
@@ -869,7 +869,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                       :seeXML "Referenzdatum_Auftragsnummer_Kaeufer" .
 
 
-###  https://purl.org/edifact-ontology#dateOrderNumberDelivery
+###  https://purl.org/edifact/ontology#dateOrderNumberDelivery
 :dateOrderNumberDelivery rdf:type owl:DatatypeProperty ;
                          rdfs:subPropertyOf :referenceDate ;
                          rdfs:domain :InvoiceContent ;
@@ -879,7 +879,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                          :seeXML "Referenzdatum_Nummer_Lieferauftrag" .
 
 
-###  https://purl.org/edifact-ontology#dateOrderNumberSupplier
+###  https://purl.org/edifact/ontology#dateOrderNumberSupplier
 :dateOrderNumberSupplier rdf:type owl:DatatypeProperty ;
                          rdfs:subPropertyOf :referenceDate ;
                          rdfs:domain :InvoiceContent ;
@@ -889,7 +889,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                          :seeXML "Referenzdatum_Auftragsnummer_Lieferant" .
 
 
-###  https://purl.org/edifact-ontology#dateOriginatorReference
+###  https://purl.org/edifact/ontology#dateOriginatorReference
 :dateOriginatorReference rdf:type owl:DatatypeProperty ;
                          rdfs:subPropertyOf :referenceDate ;
                          rdfs:domain :InvoiceContent ;
@@ -899,7 +899,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                          :seeXML "Referenzdatum_Referenz_des_Absenders" .
 
 
-###  https://purl.org/edifact-ontology#datePaymentReference
+###  https://purl.org/edifact/ontology#datePaymentReference
 :datePaymentReference rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf :referenceDate ;
                       rdfs:domain :InvoiceContent ;
@@ -909,7 +909,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                       :seeXML "Referenzdatum_Zahlungsreferenz" .
 
 
-###  https://purl.org/edifact-ontology#datePriceListNumber
+###  https://purl.org/edifact/ontology#datePriceListNumber
 :datePriceListNumber rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf :referenceDate ;
                      rdfs:domain :InvoiceContent ;
@@ -919,7 +919,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                      :seeXML "Referenzdatum_Nummer_der_Preisliste" .
 
 
-###  https://purl.org/edifact-ontology#dateProformaInvoiceNumber
+###  https://purl.org/edifact/ontology#dateProformaInvoiceNumber
 :dateProformaInvoiceNumber rdf:type owl:DatatypeProperty ;
                            rdfs:subPropertyOf :referenceDate ;
                            rdfs:domain :InvoiceContent ;
@@ -929,7 +929,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                            :seeXML "Referenzdatum_Proforma_Rechnungsnummer" .
 
 
-###  https://purl.org/edifact-ontology#dateReceivingAdviceNumber
+###  https://purl.org/edifact/ontology#dateReceivingAdviceNumber
 :dateReceivingAdviceNumber rdf:type owl:DatatypeProperty ;
                            rdfs:subPropertyOf :referenceDate ;
                            rdfs:domain :InvoiceContent ;
@@ -939,7 +939,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                            :seeXML "Referenzdatum_Wareneingangsmeldung_Nummer" .
 
 
-###  https://purl.org/edifact-ontology#dateReferenceNumberBusinessContactExtractEANCode
+###  https://purl.org/edifact/ontology#dateReferenceNumberBusinessContactExtractEANCode
 :dateReferenceNumberBusinessContactExtractEANCode rdf:type owl:DatatypeProperty ;
                                                   rdfs:subPropertyOf :referenceDate ;
                                                   rdfs:domain :InvoiceContent ;
@@ -949,7 +949,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                                                   :seeXML "Referenzdatum_Referenznummer_zu_einem_Geschaeftskontauszug_EAN_Code" .
 
 
-###  https://purl.org/edifact-ontology#dateReferenceNumberCustomer
+###  https://purl.org/edifact/ontology#dateReferenceNumberCustomer
 :dateReferenceNumberCustomer rdf:type owl:DatatypeProperty ;
                              rdfs:subPropertyOf :referenceDate ;
                              rdfs:domain :InvoiceContent ;
@@ -959,7 +959,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                              :seeXML "Referenzdatum_Referenzsnummer_des_Kunden" .
 
 
-###  https://purl.org/edifact-ontology#dateRelatedDocumentNumber
+###  https://purl.org/edifact/ontology#dateRelatedDocumentNumber
 :dateRelatedDocumentNumber rdf:type owl:DatatypeProperty ;
                            rdfs:subPropertyOf :referenceDate ;
                            rdfs:domain :InvoiceContent ;
@@ -969,7 +969,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                            :seeXML "Referenzdatum_zugehoerige_Dokumentennummer" .
 
 
-###  https://purl.org/edifact-ontology#dateSellersReferenceNumber
+###  https://purl.org/edifact/ontology#dateSellersReferenceNumber
 :dateSellersReferenceNumber rdf:type owl:DatatypeProperty ;
                             rdfs:subPropertyOf :referenceDate ;
                             rdfs:domain :InvoiceContent ;
@@ -979,7 +979,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                             :seeXML "Referenzdatum_Referenznummer_des_Verkaeufers" .
 
 
-###  https://purl.org/edifact-ontology#dateSpecificationNumber
+###  https://purl.org/edifact/ontology#dateSpecificationNumber
 :dateSpecificationNumber rdf:type owl:DatatypeProperty ;
                          rdfs:subPropertyOf :referenceDate ;
                          rdfs:domain :InvoiceContent ;
@@ -989,7 +989,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                          :seeXML "Referenzdatum_Spezifikationsnummer" .
 
 
-###  https://purl.org/edifact-ontology#debitNoteNumber
+###  https://purl.org/edifact/ontology#debitNoteNumber
 :debitNoteNumber rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf :noteNumber ;
                  rdfs:domain :InvoiceContent ;
@@ -999,7 +999,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                  :seeXML "Nummer_der_Belastungsanzeige" .
 
 
-###  https://purl.org/edifact-ontology#deliveredQuantity
+###  https://purl.org/edifact/ontology#deliveredQuantity
 :deliveredQuantity rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf :quantity ;
                    rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -1009,7 +1009,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                    :seeXML "Menge_Geliefert" .
 
 
-###  https://purl.org/edifact-ontology#deliveryCondition
+###  https://purl.org/edifact/ontology#deliveryCondition
 :deliveryCondition rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf owl:topDataProperty ;
                    rdfs:domain :InvoiceDetails ;
@@ -1019,7 +1019,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                    :seeXML "Lieferbedingung" .
 
 
-###  https://purl.org/edifact-ontology#deliveryNoteNumber
+###  https://purl.org/edifact/ontology#deliveryNoteNumber
 :deliveryNoteNumber rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf :noteNumber ;
                     rdfs:domain :InvoiceContent ;
@@ -1029,7 +1029,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                     :seeXML "Lieferscheinnummer" .
 
 
-###  https://purl.org/edifact-ontology#descriptionOfGoods
+###  https://purl.org/edifact/ontology#descriptionOfGoods
 :descriptionOfGoods rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf owl:topDataProperty ;
                     rdfs:domain :InvoiceContent ;
@@ -1039,7 +1039,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                     :seeXML "Warenbeschreibung" .
 
 
-###  https://purl.org/edifact-ontology#despatchAdviceNumber
+###  https://purl.org/edifact/ontology#despatchAdviceNumber
 :despatchAdviceNumber rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf :noteNumber ;
                       rdfs:domain :InvoiceContent ;
@@ -1049,7 +1049,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                       :seeXML "Nummer_Lieferschein" .
 
 
-###  https://purl.org/edifact-ontology#despatchQuantity
+###  https://purl.org/edifact/ontology#despatchQuantity
 :despatchQuantity rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf :quantity ;
                   rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -1059,7 +1059,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                   :seeXML "Menge_Sendungen" .
 
 
-###  https://purl.org/edifact-ontology#discountTerminationDate
+###  https://purl.org/edifact/ontology#discountTerminationDate
 :discountTerminationDate rdf:type owl:DatatypeProperty ;
                          rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> ;
                          rdfs:domain :InvoiceContent ;
@@ -1069,7 +1069,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                          :seeXML "Datum_Rabattbeendigung" .
 
 
-###  https://purl.org/edifact-ontology#discreteQuantity
+###  https://purl.org/edifact/ontology#discreteQuantity
 :discreteQuantity rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf :quantity ;
                   rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -1079,7 +1079,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                   :seeXML "Menge_Diskret" .
 
 
-###  https://purl.org/edifact-ontology#documentDate
+###  https://purl.org/edifact/ontology#documentDate
 :documentDate rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> ;
               rdfs:domain :InvoiceContent ;
@@ -1089,7 +1089,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
               :seeXML "Dokumenten_oder_Nachrichten_Datum" .
 
 
-###  https://purl.org/edifact-ontology#effectiveDate
+###  https://purl.org/edifact/ontology#effectiveDate
 :effectiveDate rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> ;
                rdfs:domain :InvoiceContent ;
@@ -1099,7 +1099,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                :seeXML "Gueltigkeitsdatum" .
 
 
-###  https://purl.org/edifact-ontology#exchangeRateDate
+###  https://purl.org/edifact/ontology#exchangeRateDate
 :exchangeRateDate rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> ;
                   rdfs:domain :InvoiceContent ;
@@ -1109,7 +1109,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                   :seeXML "Wechselkursdatum" .
 
 
-###  https://purl.org/edifact-ontology#exportReferenceNumber
+###  https://purl.org/edifact/ontology#exportReferenceNumber
 :exportReferenceNumber rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf :noteNumber ;
                        rdfs:domain :InvoiceContent ;
@@ -1119,7 +1119,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                        :seeXML "Exportreferenznummer" .
 
 
-###  https://purl.org/edifact-ontology#fileLineIdentifier
+###  https://purl.org/edifact/ontology#fileLineIdentifier
 :fileLineIdentifier rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/identifier> ;
                     rdfs:domain :InvoiceContent ;
@@ -1129,7 +1129,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                     :seeXML "Bezeichner_Dateizeilen"@de .
 
 
-###  https://purl.org/edifact-ontology#financialAccountNumberPayee
+###  https://purl.org/edifact/ontology#financialAccountNumberPayee
 :financialAccountNumberPayee rdf:type owl:DatatypeProperty ;
                              rdfs:subPropertyOf :noteNumber ;
                              rdfs:domain :InvoiceContent ;
@@ -1139,7 +1139,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                              :seeXML "Kontonummer_des_Zahlungsempfaenger" .
 
 
-###  https://purl.org/edifact-ontology#fiscalNumber
+###  https://purl.org/edifact/ontology#fiscalNumber
 :fiscalNumber rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf :noteNumber ;
               rdfs:domain <http://www.w3.org/ns/org#FormalOrganization> ;
@@ -1149,7 +1149,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
               :seeXML "Steuernummer" .
 
 
-###  https://purl.org/edifact-ontology#governmentReferenceNumber
+###  https://purl.org/edifact/ontology#governmentReferenceNumber
 :governmentReferenceNumber rdf:type owl:DatatypeProperty ;
                            rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/identifier> ;
                            rdfs:domain <http://www.w3.org/ns/org#FormalOrganization> ;
@@ -1159,7 +1159,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                            :seeXML "Referenznummer_Regierung" .
 
 
-###  https://purl.org/edifact-ontology#harmonisedSystem
+###  https://purl.org/edifact/ontology#harmonisedSystem
 :harmonisedSystem rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf :noteNumber ;
                   rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -1169,7 +1169,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                   :seeXML "Harmonisiertes_System" .
 
 
-###  https://purl.org/edifact-ontology#harmonisedSystemNumber
+###  https://purl.org/edifact/ontology#harmonisedSystemNumber
 :harmonisedSystemNumber rdf:type owl:DatatypeProperty ;
                         rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/identifier> ;
                         rdfs:domain :InvoiceContent ;
@@ -1179,7 +1179,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                         :seeXML "Nummer_harmonisiertes_System" .
 
 
-###  https://purl.org/edifact-ontology#hasAdditionalProductIdentification
+###  https://purl.org/edifact/ontology#hasAdditionalProductIdentification
 :hasAdditionalProductIdentification rdf:type owl:DatatypeProperty ;
                                     rdfs:subPropertyOf owl:topDataProperty ;
                                     rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -1189,7 +1189,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                                     :seeXML "Zusaetzliche_Produktidentifikation" .
 
 
-###  https://purl.org/edifact-ontology#hasAllowanceAmount
+###  https://purl.org/edifact/ontology#hasAllowanceAmount
 :hasAllowanceAmount rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf <http://schema.org/amount> ;
                     rdfs:domain :InvoiceContent ;
@@ -1199,7 +1199,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                     :seeXML "Abschlagsbetrag" .
 
 
-###  https://purl.org/edifact-ontology#hasAllowancePercentage
+###  https://purl.org/edifact/ontology#hasAllowancePercentage
 :hasAllowancePercentage rdf:type owl:DatatypeProperty ;
                         rdfs:subPropertyOf :percentage ;
                         rdfs:domain :InvoiceContent ;
@@ -1209,7 +1209,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                         :seeXML "AbschlagProzentsatz" .
 
 
-###  https://purl.org/edifact-ontology#hasAllowancePercentagePaymentConditions
+###  https://purl.org/edifact/ontology#hasAllowancePercentagePaymentConditions
 :hasAllowancePercentagePaymentConditions rdf:type owl:DatatypeProperty ;
                                          rdfs:subPropertyOf :percentage ;
                                          rdfs:domain :InvoiceContent ;
@@ -1219,7 +1219,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                                          :seeXML "AbschlagProzentsatzZahlungsbedingungen" .
 
 
-###  https://purl.org/edifact-ontology#hasAllowanceReason
+###  https://purl.org/edifact/ontology#hasAllowanceReason
 :hasAllowanceReason rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf owl:topDataProperty ;
                     rdfs:domain :InvoiceContent ;
@@ -1229,7 +1229,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                     :seeXML "Abschlag" .
 
 
-###  https://purl.org/edifact-ontology#hasAmountDueOrPayable
+###  https://purl.org/edifact/ontology#hasAmountDueOrPayable
 :hasAmountDueOrPayable rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf <http://schema.org/amount> ;
                        rdfs:domain :InvoiceContent ;
@@ -1239,7 +1239,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                        :seeXML "Faelliger_Betrag_oder_zahlbarerBetrag" .
 
 
-###  https://purl.org/edifact-ontology#hasAmountUnderPriceAdjustment
+###  https://purl.org/edifact/ontology#hasAmountUnderPriceAdjustment
 :hasAmountUnderPriceAdjustment rdf:type owl:DatatypeProperty ;
                                rdfs:subPropertyOf <http://schema.org/amount> ;
                                rdfs:domain :InvoiceContent ;
@@ -1249,7 +1249,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                                :seeXML "Betrag_unterliegt_einer_Preisberichtigung" .
 
 
-###  https://purl.org/edifact-ontology#hasBasicTaxAmount
+###  https://purl.org/edifact/ontology#hasBasicTaxAmount
 :hasBasicTaxAmount rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf <http://schema.org/amount> ;
                    rdfs:domain :InvoiceDetails ;
@@ -1259,7 +1259,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                    :seeXML "Steuergrundbetrag" .
 
 
-###  https://purl.org/edifact-ontology#hasCashDiscount
+###  https://purl.org/edifact/ontology#hasCashDiscount
 :hasCashDiscount rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf <http://schema.org/amount> ;
                  rdfs:domain :InvoiceContent ;
@@ -1269,7 +1269,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                  :seeXML "Barzahlungsrabatt" .
 
 
-###  https://purl.org/edifact-ontology#hasChargeAllowanceBasis
+###  https://purl.org/edifact/ontology#hasChargeAllowanceBasis
 :hasChargeAllowanceBasis rdf:type owl:DatatypeProperty ;
                          rdfs:subPropertyOf <http://schema.org/amount> ;
                          rdfs:domain :InvoiceContent ;
@@ -1279,7 +1279,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                          :seeXML "Zu_Abschlagsbasis" .
 
 
-###  https://purl.org/edifact-ontology#hasChargeAmount
+###  https://purl.org/edifact/ontology#hasChargeAmount
 :hasChargeAmount rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf <http://schema.org/amount> ;
                  rdfs:domain :InvoiceContent ;
@@ -1289,7 +1289,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                  :seeXML "Zuschlagsbetrag" .
 
 
-###  https://purl.org/edifact-ontology#hasChargePercentage
+###  https://purl.org/edifact/ontology#hasChargePercentage
 :hasChargePercentage rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf :percentage ;
                      rdfs:domain :InvoiceContent ;
@@ -1299,7 +1299,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                      :seeXML "ZuschlagProzentsatz" .
 
 
-###  https://purl.org/edifact-ontology#hasChargePercentagePaymentConditions
+###  https://purl.org/edifact/ontology#hasChargePercentagePaymentConditions
 :hasChargePercentagePaymentConditions rdf:type owl:DatatypeProperty ;
                                       rdfs:subPropertyOf :percentage ;
                                       rdfs:domain :InvoiceContent ;
@@ -1309,7 +1309,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                                       :seeXML "ZuschlagProzentsatzZahlungsbedingungen" .
 
 
-###  https://purl.org/edifact-ontology#hasChargeReason
+###  https://purl.org/edifact/ontology#hasChargeReason
 :hasChargeReason rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf owl:topDataProperty ;
                  rdfs:domain :InvoiceContent ;
@@ -1319,7 +1319,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                  :seeXML "Zuschlag" .
 
 
-###  https://purl.org/edifact-ontology#hasCity
+###  https://purl.org/edifact/ontology#hasCity
 :hasCity rdf:type owl:DatatypeProperty ;
          rdfs:subPropertyOf owl:topDataProperty ;
          rdfs:domain <http://www.w3.org/ns/org#FormalOrganization> ;
@@ -1329,7 +1329,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
          :seeXML "D_3164" .
 
 
-###  https://purl.org/edifact-ontology#hasDiscountAmount
+###  https://purl.org/edifact/ontology#hasDiscountAmount
 :hasDiscountAmount rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf <http://schema.org/amount> ;
                    rdfs:domain :InvoiceContent ;
@@ -1339,7 +1339,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                    :seeXML "Abzug_Rabatt" .
 
 
-###  https://purl.org/edifact-ontology#hasDiscountPercentage
+###  https://purl.org/edifact/ontology#hasDiscountPercentage
 :hasDiscountPercentage rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf :percentage ;
                        rdfs:domain :InvoiceContent ;
@@ -1349,7 +1349,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                        :seeXML "AbzugProzentsatz" .
 
 
-###  https://purl.org/edifact-ontology#hasDiscountPercentagePaymentConditions
+###  https://purl.org/edifact/ontology#hasDiscountPercentagePaymentConditions
 :hasDiscountPercentagePaymentConditions rdf:type owl:DatatypeProperty ;
                                         rdfs:subPropertyOf :percentage ;
                                         rdfs:domain :InvoiceContent ;
@@ -1359,7 +1359,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                                         :seeXML "AbzugProzentsatzZahlungsbedingungen" .
 
 
-###  https://purl.org/edifact-ontology#hasDiscreteQuantityWithUnit
+###  https://purl.org/edifact/ontology#hasDiscreteQuantityWithUnit
 :hasDiscreteQuantityWithUnit rdf:type owl:DatatypeProperty ;
                              rdfs:subPropertyOf owl:topDataProperty ;
                              rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -1369,7 +1369,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                              :seeXML "Diskrete_Menge_Einheit" .
 
 
-###  https://purl.org/edifact-ontology#hasDocumentFunction
+###  https://purl.org/edifact/ontology#hasDocumentFunction
 :hasDocumentFunction rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf owl:topDataProperty ;
                      rdfs:domain :InvoiceDetails ;
@@ -1379,7 +1379,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                      :seeXML "Dokumentenfunktion" .
 
 
-###  https://purl.org/edifact-ontology#hasDocumentNumber
+###  https://purl.org/edifact/ontology#hasDocumentNumber
 :hasDocumentNumber rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf :noteNumber ;
                    rdfs:domain :InvoiceDetails ;
@@ -1389,7 +1389,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                    :seeXML "Dokumentennummer" .
 
 
-###  https://purl.org/edifact-ontology#hasDocumentType
+###  https://purl.org/edifact/ontology#hasDocumentType
 :hasDocumentType rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf owl:topDataProperty ;
                  rdfs:domain :InvoiceDetails ;
@@ -1399,7 +1399,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                  :seeXML "Dokumentenname" .
 
 
-###  https://purl.org/edifact-ontology#hasDueDate
+###  https://purl.org/edifact/ontology#hasDueDate
 :hasDueDate rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> ;
             rdfs:domain :InvoiceContent ;
@@ -1408,7 +1408,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
             rdfs:label "hasDueDate"@en .
 
 
-###  https://purl.org/edifact-ontology#hasDueDeductionAmount
+###  https://purl.org/edifact/ontology#hasDueDeductionAmount
 :hasDueDeductionAmount rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf <http://schema.org/amount> ;
                        rdfs:domain :InvoiceContent ;
@@ -1418,7 +1418,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                        :seeXML "Faelliger_Abzugsbetrag" .
 
 
-###  https://purl.org/edifact-ontology#hasFreightCharge
+###  https://purl.org/edifact/ontology#hasFreightCharge
 :hasFreightCharge rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf <http://schema.org/amount> ;
                   rdfs:domain :InvoiceDetails ;
@@ -1428,7 +1428,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                   :seeXML "Frachtgebuehr" .
 
 
-###  https://purl.org/edifact-ontology#hasFunctionInInvoice
+###  https://purl.org/edifact/ontology#hasFunctionInInvoice
 :hasFunctionInInvoice rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf owl:topDataProperty ;
                       rdfs:domain <http://www.w3.org/ns/org#FormalOrganization> ;
@@ -1438,7 +1438,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                       :seeXML "D_PaFu" .
 
 
-###  https://purl.org/edifact-ontology#hasGSTrate
+###  https://purl.org/edifact/ontology#hasGSTrate
 :hasGSTrate rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :hasTAXrate ;
             rdfs:domain :InvoiceContent ;
@@ -1448,7 +1448,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
             :seeXML "Waren_Dienstleistungssteuer" .
 
 
-###  https://purl.org/edifact-ontology#hasGeneralInformation
+###  https://purl.org/edifact/ontology#hasGeneralInformation
 :hasGeneralInformation rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf owl:topDataProperty ;
                        rdfs:domain :InvoiceContent ;
@@ -1458,7 +1458,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                        :seeXML "Generelle_Informationen" .
 
 
-###  https://purl.org/edifact-ontology#hasGrosspriceOfItem
+###  https://purl.org/edifact/ontology#hasGrosspriceOfItem
 :hasGrosspriceOfItem rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf <http://schema.org/amount> ;
                      rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -1468,7 +1468,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                      :seeXML "Bruttokalkulation" .
 
 
-###  https://purl.org/edifact-ontology#hasGrosspricePerUnit
+###  https://purl.org/edifact/ontology#hasGrosspricePerUnit
 :hasGrosspricePerUnit rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf <http://schema.org/amount> ;
                       rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -1478,7 +1478,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                       :seeXML "Bruttopreis_pro_Einheit" .
 
 
-###  https://purl.org/edifact-ontology#hasHeightDimension
+###  https://purl.org/edifact/ontology#hasHeightDimension
 :hasHeightDimension rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf owl:topDataProperty ;
                     rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -1488,7 +1488,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                     :seeXML "Hoehenmass" .
 
 
-###  https://purl.org/edifact-ontology#hasInvoiceAmount
+###  https://purl.org/edifact/ontology#hasInvoiceAmount
 :hasInvoiceAmount rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf <http://schema.org/amount> ;
                   rdfs:domain :InvoiceDetails ;
@@ -1498,7 +1498,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                   :seeXML "Rechnungsbetrag" .
 
 
-###  https://purl.org/edifact-ontology#hasInvoicePercentage
+###  https://purl.org/edifact/ontology#hasInvoicePercentage
 :hasInvoicePercentage rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf :percentage ;
                       rdfs:domain :InvoiceContent ;
@@ -1508,7 +1508,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                       :seeXML "RechnungsProzentsatz" .
 
 
-###  https://purl.org/edifact-ontology#hasInvoicePercentagePaymentConditions
+###  https://purl.org/edifact/ontology#hasInvoicePercentagePaymentConditions
 :hasInvoicePercentagePaymentConditions rdf:type owl:DatatypeProperty ;
                                        rdfs:subPropertyOf :percentage ;
                                        rdfs:domain :InvoiceContent ;
@@ -1518,7 +1518,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                                        :seeXML "RechnungsProzentsatzZahlungsbedingungen" .
 
 
-###  https://purl.org/edifact-ontology#hasInvoiceprice
+###  https://purl.org/edifact/ontology#hasInvoiceprice
 :hasInvoiceprice rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf <http://schema.org/amount> ;
                  rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -1528,7 +1528,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                  :seeXML "Rechnungspreis" .
 
 
-###  https://purl.org/edifact-ontology#hasLengthMeasurements
+###  https://purl.org/edifact/ontology#hasLengthMeasurements
 :hasLengthMeasurements rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf owl:topDataProperty ;
                        rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -1538,7 +1538,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                        :seeXML "Laengenmassangaben" .
 
 
-###  https://purl.org/edifact-ontology#hasLineItemAmount
+###  https://purl.org/edifact/ontology#hasLineItemAmount
 :hasLineItemAmount rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf <http://schema.org/amount> ;
                    rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -1548,7 +1548,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                    :seeXML "Positionsbetrag" .
 
 
-###  https://purl.org/edifact-ontology#hasNetPriceOfItem
+###  https://purl.org/edifact/ontology#hasNetPriceOfItem
 :hasNetPriceOfItem rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf <http://schema.org/amount> ;
                    rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -1558,7 +1558,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                    :seeXML "Nettokalkulation" .
 
 
-###  https://purl.org/edifact-ontology#hasNetWeight
+###  https://purl.org/edifact/ontology#hasNetWeight
 :hasNetWeight rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf owl:topDataProperty ;
               rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -1568,7 +1568,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
               :seeXML "Nettonettogewicht" .
 
 
-###  https://purl.org/edifact-ontology#hasNetWeightPerUnit
+###  https://purl.org/edifact/ontology#hasNetWeightPerUnit
 :hasNetWeightPerUnit rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf owl:topDataProperty ;
                      rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -1578,7 +1578,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                      :seeXML "Nettogewicht_pro_Einheit" .
 
 
-###  https://purl.org/edifact-ontology#hasNetpricePerUnit
+###  https://purl.org/edifact/ontology#hasNetpricePerUnit
 :hasNetpricePerUnit rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf <http://schema.org/amount> ;
                     rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -1588,7 +1588,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                     :seeXML "Nettopreis_pro_Einheit" .
 
 
-###  https://purl.org/edifact-ontology#hasPaymentDiscountAmount
+###  https://purl.org/edifact/ontology#hasPaymentDiscountAmount
 :hasPaymentDiscountAmount rdf:type owl:DatatypeProperty ;
                           rdfs:subPropertyOf <http://schema.org/amount> ;
                           rdfs:domain :InvoiceDetails ;
@@ -1598,7 +1598,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                           :seeXML "Zahlungskuerzung" .
 
 
-###  https://purl.org/edifact-ontology#hasPenaltyAmount
+###  https://purl.org/edifact/ontology#hasPenaltyAmount
 :hasPenaltyAmount rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf <http://schema.org/amount> ;
                   rdfs:domain :InvoiceContent ;
@@ -1608,7 +1608,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                   :seeXML "Strafbetrag" .
 
 
-###  https://purl.org/edifact-ontology#hasPenaltyPercentage
+###  https://purl.org/edifact/ontology#hasPenaltyPercentage
 :hasPenaltyPercentage rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf :percentage ;
                       rdfs:domain :InvoiceContent ;
@@ -1618,7 +1618,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                       :seeXML "StrafProzentsatz" .
 
 
-###  https://purl.org/edifact-ontology#hasPenaltyPercentagePaymentConditions
+###  https://purl.org/edifact/ontology#hasPenaltyPercentagePaymentConditions
 :hasPenaltyPercentagePaymentConditions rdf:type owl:DatatypeProperty ;
                                        rdfs:subPropertyOf :percentage ;
                                        rdfs:domain :InvoiceContent ;
@@ -1628,7 +1628,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                                        :seeXML "StrafProzentsatzZahlungsbedingungen" .
 
 
-###  https://purl.org/edifact-ontology#hasPhysicalDimension
+###  https://purl.org/edifact/ontology#hasPhysicalDimension
 :hasPhysicalDimension rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf owl:topDataProperty ;
                       rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -1638,7 +1638,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                       :seeXML "Physische_Abmessung" .
 
 
-###  https://purl.org/edifact-ontology#hasPrepaidAmount
+###  https://purl.org/edifact/ontology#hasPrepaidAmount
 :hasPrepaidAmount rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf <http://schema.org/amount> ;
                   rdfs:domain :InvoiceContent ;
@@ -1648,7 +1648,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                   :seeXML "Vorausbezahlter_Betrag" .
 
 
-###  https://purl.org/edifact-ontology#hasPriceSource
+###  https://purl.org/edifact/ontology#hasPriceSource
 :hasPriceSource rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf owl:topDataProperty ;
                 rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -1658,7 +1658,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                 :seeXML "PreisQuelle" .
 
 
-###  https://purl.org/edifact-ontology#hasPriceType
+###  https://purl.org/edifact/ontology#hasPriceType
 :hasPriceType rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf owl:topDataProperty ;
               rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -1668,7 +1668,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
               :seeXML "PreisArt" .
 
 
-###  https://purl.org/edifact-ontology#hasPriceUnit
+###  https://purl.org/edifact/ontology#hasPriceUnit
 :hasPriceUnit rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf :hasUnit ;
               rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -1678,7 +1678,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
               :seeXML "D_PRIMaEinheit" .
 
 
-###  https://purl.org/edifact-ontology#hasProductIdentification
+###  https://purl.org/edifact/ontology#hasProductIdentification
 :hasProductIdentification rdf:type owl:DatatypeProperty ;
                           rdfs:subPropertyOf owl:topDataProperty ;
                           rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -1688,7 +1688,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                           :seeXML "Produktidentifikation" .
 
 
-###  https://purl.org/edifact-ontology#hasQuantityUnit
+###  https://purl.org/edifact/ontology#hasQuantityUnit
 :hasQuantityUnit rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf :hasUnit ;
                  rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -1698,7 +1698,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                  :seeXML "D_QTYMaEinheit" .
 
 
-###  https://purl.org/edifact-ontology#hasRemittedtAmount
+###  https://purl.org/edifact/ontology#hasRemittedtAmount
 :hasRemittedtAmount rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf <http://schema.org/amount> ;
                     rdfs:domain :InvoiceContent ;
@@ -1708,7 +1708,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                     :seeXML "Uebermittelter_Betrag" .
 
 
-###  https://purl.org/edifact-ontology#hasRequiredDeliveryDate
+###  https://purl.org/edifact/ontology#hasRequiredDeliveryDate
 :hasRequiredDeliveryDate rdf:type owl:DatatypeProperty ;
                          rdfs:subPropertyOf <https://purl.org/p2p-o/invoice#deliveryDate> ;
                          rdfs:domain :InvoiceContent ;
@@ -1718,7 +1718,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                          :seeXML "geforderter_Liefertermin" .
 
 
-###  https://purl.org/edifact-ontology#hasStockRestriction
+###  https://purl.org/edifact/ontology#hasStockRestriction
 :hasStockRestriction rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf owl:topDataProperty ;
                      rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -1728,7 +1728,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                      :seeXML "Lagerbeschraenkung" .
 
 
-###  https://purl.org/edifact-ontology#hasTAXrate
+###  https://purl.org/edifact/ontology#hasTAXrate
 :hasTAXrate rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf owl:topDataProperty ;
             rdfs:domain :InvoiceContent ;
@@ -1737,7 +1737,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
             rdfs:label "hasTAXrate"@en .
 
 
-###  https://purl.org/edifact-ontology#hasTaxAmount
+###  https://purl.org/edifact/ontology#hasTaxAmount
 :hasTaxAmount rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf <http://schema.org/amount> ;
               rdfs:domain :InvoiceContent ;
@@ -1747,7 +1747,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
               :seeXML "Steuerbetrag"@de .
 
 
-###  https://purl.org/edifact-ontology#hasTaxableAmount
+###  https://purl.org/edifact/ontology#hasTaxableAmount
 :hasTaxableAmount rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf <http://schema.org/amount> ;
                   rdfs:domain :InvoiceContent ;
@@ -1757,7 +1757,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                   :seeXML "Steuerpflichtiger_Betrag" .
 
 
-###  https://purl.org/edifact-ontology#hasTermsDiscountDueDate
+###  https://purl.org/edifact/ontology#hasTermsDiscountDueDate
 :hasTermsDiscountDueDate rdf:type owl:DatatypeProperty ;
                          rdfs:subPropertyOf :hasDueDate ;
                          rdfs:domain :InvoiceContent ;
@@ -1767,7 +1767,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                          :seeXML "Faelligkeitsdatum_bei_Skontoabzug" .
 
 
-###  https://purl.org/edifact-ontology#hasTermsNetDueDate
+###  https://purl.org/edifact/ontology#hasTermsNetDueDate
 :hasTermsNetDueDate rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf :hasDueDate ;
                     rdfs:domain :InvoiceContent ;
@@ -1777,7 +1777,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                     :seeXML "Faelligkeitsdatum_bei_Zahlung_ohne_Abzug" .
 
 
-###  https://purl.org/edifact-ontology#hasTotalAdditionsAndDeductions
+###  https://purl.org/edifact/ontology#hasTotalAdditionsAndDeductions
 :hasTotalAdditionsAndDeductions rdf:type owl:DatatypeProperty ;
                                 rdfs:subPropertyOf <http://schema.org/amount> ;
                                 rdfs:domain :InvoiceDetails ;
@@ -1787,7 +1787,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                                 :seeXML "GesamtZu_Abschlaege" .
 
 
-###  https://purl.org/edifact-ontology#hasTotalAmount
+###  https://purl.org/edifact/ontology#hasTotalAmount
 :hasTotalAmount rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf <http://schema.org/amount> ;
                 rdfs:domain :InvoiceDetails ;
@@ -1797,7 +1797,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                 :seeXML "Gesamtbetrag" .
 
 
-###  https://purl.org/edifact-ontology#hasTotalAmountMessage
+###  https://purl.org/edifact/ontology#hasTotalAmountMessage
 :hasTotalAmountMessage rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf <http://schema.org/amount> ;
                        rdfs:domain :InvoiceDetails ;
@@ -1807,7 +1807,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                        :seeXML "Gesamtbetrag_Nachricht" .
 
 
-###  https://purl.org/edifact-ontology#hasTotalAmountUnderPaymentReduction
+###  https://purl.org/edifact/ontology#hasTotalAmountUnderPaymentReduction
 :hasTotalAmountUnderPaymentReduction rdf:type owl:DatatypeProperty ;
                                      rdfs:subPropertyOf <http://schema.org/amount> ;
                                      rdfs:domain :InvoiceContent ;
@@ -1817,7 +1817,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                                      :seeXML "Gesamtbetrag_unterliegt_Zahlungskuerzung" .
 
 
-###  https://purl.org/edifact-ontology#hasTotalDutyTaxFeeAmount
+###  https://purl.org/edifact/ontology#hasTotalDutyTaxFeeAmount
 :hasTotalDutyTaxFeeAmount rdf:type owl:DatatypeProperty ;
                           rdfs:subPropertyOf <http://schema.org/amount> ;
                           rdfs:domain :InvoiceDetails ;
@@ -1827,7 +1827,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                           :seeXML "Gesamter_Zoll_Steuer_Gebuehrenbetrag_der_Nachricht" .
 
 
-###  https://purl.org/edifact-ontology#hasTotalGoodsPosition
+###  https://purl.org/edifact/ontology#hasTotalGoodsPosition
 :hasTotalGoodsPosition rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf <http://schema.org/amount> ;
                        rdfs:domain :InvoiceDetails ;
@@ -1837,7 +1837,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                        :seeXML "WarenpositionInsgesamt" .
 
 
-###  https://purl.org/edifact-ontology#hasTotalLineItemAmount
+###  https://purl.org/edifact/ontology#hasTotalLineItemAmount
 :hasTotalLineItemAmount rdf:type owl:DatatypeProperty ;
                         rdfs:subPropertyOf <http://schema.org/amount> ;
                         rdfs:domain :InvoiceDetails ;
@@ -1847,7 +1847,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                         :seeXML "Gesamtpositionsbetrag" .
 
 
-###  https://purl.org/edifact-ontology#hasTransportRestriction
+###  https://purl.org/edifact/ontology#hasTransportRestriction
 :hasTransportRestriction rdf:type owl:DatatypeProperty ;
                          rdfs:subPropertyOf owl:topDataProperty ;
                          rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -1857,7 +1857,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                          :seeXML "Beschraekung_Transportmittels" .
 
 
-###  https://purl.org/edifact-ontology#hasUnit
+###  https://purl.org/edifact/ontology#hasUnit
 :hasUnit rdf:type owl:DatatypeProperty ;
          rdfs:subPropertyOf owl:topDataProperty ;
          rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -1867,7 +1867,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
          :seeXML "D_MaEinheit" .
 
 
-###  https://purl.org/edifact-ontology#hasUnitPrice
+###  https://purl.org/edifact/ontology#hasUnitPrice
 :hasUnitPrice rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf <http://schema.org/amount> ;
               rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -1877,7 +1877,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
               :seeXML "Preis_pro_Einheit" .
 
 
-###  https://purl.org/edifact-ontology#hasVATIdentifierBuyer
+###  https://purl.org/edifact/ontology#hasVATIdentifierBuyer
 :hasVATIdentifierBuyer rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf <https://purl.org/p2p-o/organization#VATIdentifier> ;
                        rdfs:domain <http://www.w3.org/ns/org#FormalOrganization> ;
@@ -1887,7 +1887,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                        :seeXML "Umsatzsteuernummer_Kaeufer" .
 
 
-###  https://purl.org/edifact-ontology#hasVATIdentifierDeliveryParty
+###  https://purl.org/edifact/ontology#hasVATIdentifierDeliveryParty
 :hasVATIdentifierDeliveryParty rdf:type owl:DatatypeProperty ;
                                rdfs:subPropertyOf <https://purl.org/p2p-o/organization#VATIdentifier> ;
                                rdfs:domain <http://www.w3.org/ns/org#FormalOrganization> ;
@@ -1897,7 +1897,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                                :seeXML "Umsatzsteuernummer_Lieferanschrift" .
 
 
-###  https://purl.org/edifact-ontology#hasVATIdentifierInvoicee
+###  https://purl.org/edifact/ontology#hasVATIdentifierInvoicee
 :hasVATIdentifierInvoicee rdf:type owl:DatatypeProperty ;
                           rdfs:subPropertyOf <https://purl.org/p2p-o/organization#VATIdentifier> ;
                           rdfs:domain <http://www.w3.org/ns/org#FormalOrganization> ;
@@ -1907,7 +1907,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                           :seeXML "Umsatzsteuernummer_Rechnungsempfaenger" .
 
 
-###  https://purl.org/edifact-ontology#hasVATIdentifierPayer
+###  https://purl.org/edifact/ontology#hasVATIdentifierPayer
 :hasVATIdentifierPayer rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf <https://purl.org/p2p-o/organization#VATIdentifier> ;
                        rdfs:domain <http://www.w3.org/ns/org#FormalOrganization> ;
@@ -1917,7 +1917,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                        :seeXML "Umsatzsteuernummer_Bezahler" .
 
 
-###  https://purl.org/edifact-ontology#hasVATIdentifierSupplier
+###  https://purl.org/edifact/ontology#hasVATIdentifierSupplier
 :hasVATIdentifierSupplier rdf:type owl:DatatypeProperty ;
                           rdfs:subPropertyOf <https://purl.org/p2p-o/organization#VATIdentifier> ;
                           rdfs:domain <http://www.w3.org/ns/org#FormalOrganization> ;
@@ -1927,7 +1927,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                           :seeXML "Umsatzsteuernummer_Lieferant" .
 
 
-###  https://purl.org/edifact-ontology#hasVATamount
+###  https://purl.org/edifact/ontology#hasVATamount
 :hasVATamount rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf <http://schema.org/amount> ;
               rdfs:domain :InvoiceContent ;
@@ -1937,7 +1937,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
               :seeXML "Mehrwertsteuer_Betrag" .
 
 
-###  https://purl.org/edifact-ontology#hasVATfirstValue
+###  https://purl.org/edifact/ontology#hasVATfirstValue
 :hasVATfirstValue rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf <http://schema.org/amount> ;
                   rdfs:domain :InvoiceDetails ;
@@ -1947,7 +1947,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                   :seeXML "Umsatzsteuer_erster_Wert" .
 
 
-###  https://purl.org/edifact-ontology#hasVATrate
+###  https://purl.org/edifact/ontology#hasVATrate
 :hasVATrate rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :hasTAXrate ;
             rdfs:domain :InvoiceContent ;
@@ -1957,7 +1957,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
             :seeXML "Mehrwertsteuer" .
 
 
-###  https://purl.org/edifact-ontology#importLicenseNumber
+###  https://purl.org/edifact/ontology#importLicenseNumber
 :importLicenseNumber rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf :noteNumber ;
                      rdfs:domain <http://www.w3.org/ns/org#FormalOrganization> ;
@@ -1967,7 +1967,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                      :seeXML "Import_Lizenznummer"@de .
 
 
-###  https://purl.org/edifact-ontology#informationCustomsDeclaration
+###  https://purl.org/edifact/ontology#informationCustomsDeclaration
 :informationCustomsDeclaration rdf:type owl:DatatypeProperty ;
                                rdfs:subPropertyOf owl:topDataProperty ;
                                rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -1977,7 +1977,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                                :seeXML "Informatioen_zur_Zollerklaerung" .
 
 
-###  https://purl.org/edifact-ontology#instructionForInvoicingParty
+###  https://purl.org/edifact/ontology#instructionForInvoicingParty
 :instructionForInvoicingParty rdf:type owl:DatatypeProperty ;
                               rdfs:subPropertyOf owl:topDataProperty ;
                               rdfs:domain :InvoiceContent ;
@@ -1987,7 +1987,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                               :seeXML "Anweisung_fur_Rechnungssteller" .
 
 
-###  https://purl.org/edifact-ontology#internalCustomerNumber
+###  https://purl.org/edifact/ontology#internalCustomerNumber
 :internalCustomerNumber rdf:type owl:DatatypeProperty ;
                         rdfs:subPropertyOf :noteNumber ;
                         rdfs:domain <http://www.w3.org/ns/org#FormalOrganization> ;
@@ -1997,7 +1997,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                         :seeXML "Interne_Kundennummer" .
 
 
-###  https://purl.org/edifact-ontology#internalVendorNumber
+###  https://purl.org/edifact/ontology#internalVendorNumber
 :internalVendorNumber rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/identifier> ;
                       rdfs:domain :InvoiceContent ;
@@ -2007,7 +2007,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                       :seeXML "Interne_Verkaufsnummer" .
 
 
-###  https://purl.org/edifact-ontology#internationalArticleNumber
+###  https://purl.org/edifact/ontology#internationalArticleNumber
 :internationalArticleNumber rdf:type owl:DatatypeProperty ;
                             rdfs:subPropertyOf :noteNumber ;
                             rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -2017,7 +2017,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                             :seeXML "International_Article_Number" .
 
 
-###  https://purl.org/edifact-ontology#invoiceCurrency
+###  https://purl.org/edifact/ontology#invoiceCurrency
 :invoiceCurrency rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf <http://schema.org/currency> ;
                  rdfs:domain :InvoiceDetails ;
@@ -2027,7 +2027,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                  :seeXML "WaehrungRechnung" .
 
 
-###  https://purl.org/edifact-ontology#itemNumberBuyer
+###  https://purl.org/edifact/ontology#itemNumberBuyer
 :itemNumberBuyer rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf :noteNumber ;
                  rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -2037,7 +2037,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                  :seeXML "Artikelnummer_des_Kaeufer" .
 
 
-###  https://purl.org/edifact-ontology#itemNumberManufacturer
+###  https://purl.org/edifact/ontology#itemNumberManufacturer
 :itemNumberManufacturer rdf:type owl:DatatypeProperty ;
                         rdfs:subPropertyOf :noteNumber ;
                         rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -2047,7 +2047,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                         :seeXML "Artikelnummer_des_Herstellers" .
 
 
-###  https://purl.org/edifact-ontology#itemNumberSupplier
+###  https://purl.org/edifact/ontology#itemNumberSupplier
 :itemNumberSupplier rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf :noteNumber ;
                     rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -2057,7 +2057,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                     :seeXML "Artikelnummer_des_Lieferanten" .
 
 
-###  https://purl.org/edifact-ontology#lineItemReferenceNumber
+###  https://purl.org/edifact/ontology#lineItemReferenceNumber
 :lineItemReferenceNumber rdf:type owl:DatatypeProperty ;
                          rdfs:subPropertyOf :noteNumber ;
                          rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -2067,7 +2067,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                          :seeXML "Referenznummer_der_Position" .
 
 
-###  https://purl.org/edifact-ontology#loadPeriod
+###  https://purl.org/edifact/ontology#loadPeriod
 :loadPeriod rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :timePeriod ;
             rdfs:domain :InvoiceContent ;
@@ -2077,40 +2077,40 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
             :seeXML "Belastungsperiode" .
 
 
-###  https://purl.org/edifact-ontology#managingOrganisations
+###  https://purl.org/edifact/ontology#managingOrganisations
 :managingOrganisations rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf owl:topDataProperty ;
-                       rdfs:domain :EANCOM-Structure ;
+                       rdfs:domain :EDIFACT-Structure ;
                        rdfs:range xsd:string ;
                        rdfs:comment "Identification of the managing organization" ;
                        rdfs:label "managingOrganisations"@en ;
-                       :seeEANCOMD96A "D_0051" ;
+                       :seeEDIFACT "D_0051" ;
                        :seeXML "D_0051" .
 
 
-###  https://purl.org/edifact-ontology#messageReferenceNumber
+###  https://purl.org/edifact/ontology#messageReferenceNumber
 :messageReferenceNumber rdf:type owl:DatatypeProperty ;
                         rdfs:subPropertyOf owl:topDataProperty ;
-                        rdfs:domain :EANCOM-Structure ;
+                        rdfs:domain :EDIFACT-Structure ;
                         rdfs:range xsd:string ;
                         rdfs:comment "The reference number of the message" ;
                         rdfs:label "messageReferenceNumber"@en ;
-                        :seeEANCOMD96A "D_0062" ;
+                        :seeEDIFACT "D_0062" ;
                         :seeXML "D_0062" .
 
 
-###  https://purl.org/edifact-ontology#messageTypeIdentifier
+###  https://purl.org/edifact/ontology#messageTypeIdentifier
 :messageTypeIdentifier rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf owl:topDataProperty ;
-                       rdfs:domain :EANCOM-Structure ;
+                       rdfs:domain :EDIFACT-Structure ;
                        rdfs:range xsd:string ;
                        rdfs:comment "The identifier of the message type" ;
                        rdfs:label "messageTypeIdentifier"@en ;
-                       :seeEANCOMD96A "D_0065" ;
+                       :seeEDIFACT "D_0065" ;
                        :seeXML "D_0065" .
 
 
-###  https://purl.org/edifact-ontology#nationalProductGroupCode
+###  https://purl.org/edifact/ontology#nationalProductGroupCode
 :nationalProductGroupCode rdf:type owl:DatatypeProperty ;
                           rdfs:subPropertyOf :noteNumber ;
                           rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -2120,7 +2120,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                           :seeXML "Nationaler_Produktgruppencode" .
 
 
-###  https://purl.org/edifact-ontology#noDiscountAllowance
+###  https://purl.org/edifact/ontology#noDiscountAllowance
 :noDiscountAllowance rdf:type owl:DatatypeProperty ;
                      rdfs:domain :InvoiceContent ;
                      rdfs:range xsd:string ;
@@ -2129,7 +2129,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                      :seeXML "Kein_Abschlag_Zuschlag" .
 
 
-###  https://purl.org/edifact-ontology#noteNumber
+###  https://purl.org/edifact/ontology#noteNumber
 :noteNumber rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/identifier> ;
             rdfs:domain :InvoiceContent ;
@@ -2138,7 +2138,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
             rdfs:label "noteNumber"@en .
 
 
-###  https://purl.org/edifact-ontology#numberConsolidatedInvoiceEANCode
+###  https://purl.org/edifact/ontology#numberConsolidatedInvoiceEANCode
 :numberConsolidatedInvoiceEANCode rdf:type owl:DatatypeProperty ;
                                   rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/identifier> ;
                                   rdfs:domain :InvoiceContent ;
@@ -2148,7 +2148,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                                   :seeXML "Nummer_einr_konsolidierten_Rechnung_EAN_Code" .
 
 
-###  https://purl.org/edifact-ontology#numberOfBundleMessages
+###  https://purl.org/edifact/ontology#numberOfBundleMessages
 :numberOfBundleMessages rdf:type owl:DatatypeProperty ;
                         rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/identifier> ;
                         rdfs:domain :InvoiceContent ;
@@ -2158,7 +2158,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                         :seeXML "Nummer_eines_Buendels_von_Nachrichten" .
 
 
-###  https://purl.org/edifact-ontology#offerNumber
+###  https://purl.org/edifact/ontology#offerNumber
 :offerNumber rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf :noteNumber ;
              rdfs:domain :InvoiceContent ;
@@ -2168,7 +2168,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
              :seeXML "Angebotsnummer" .
 
 
-###  https://purl.org/edifact-ontology#orderCurrency
+###  https://purl.org/edifact/ontology#orderCurrency
 :orderCurrency rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf <http://schema.org/currency> ;
                rdfs:domain :InvoiceDetails ;
@@ -2178,7 +2178,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                :seeXML "WaehrungBestellung" .
 
 
-###  https://purl.org/edifact-ontology#orderDate
+###  https://purl.org/edifact/ontology#orderDate
 :orderDate rdf:type owl:DatatypeProperty ;
            rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> ;
            rdfs:domain :InvoiceContent ;
@@ -2188,7 +2188,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
            :seeXML "Bestelldatum" .
 
 
-###  https://purl.org/edifact-ontology#orderNumber
+###  https://purl.org/edifact/ontology#orderNumber
 :orderNumber rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf :noteNumber ;
              rdfs:domain <http://www.w3.org/ns/org#FormalOrganization> ;
@@ -2197,7 +2197,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
              rdfs:label "orderNumber"@en .
 
 
-###  https://purl.org/edifact-ontology#orderNumberBuyer
+###  https://purl.org/edifact/ontology#orderNumberBuyer
 :orderNumberBuyer rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf :orderNumber ;
                   rdfs:domain <http://www.w3.org/ns/org#FormalOrganization> ;
@@ -2207,7 +2207,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                   :seeXML "Auftragsnummer_Kaeufer" .
 
 
-###  https://purl.org/edifact-ontology#orderNumberDelivery
+###  https://purl.org/edifact/ontology#orderNumberDelivery
 :orderNumberDelivery rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf :orderNumber ;
                      rdfs:domain :InvoiceContent ;
@@ -2217,7 +2217,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                      :seeXML "Nummer_Lieferauftrag" .
 
 
-###  https://purl.org/edifact-ontology#orderNumberSupplier
+###  https://purl.org/edifact/ontology#orderNumberSupplier
 :orderNumberSupplier rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf :orderNumber ;
                      rdfs:domain <http://www.w3.org/ns/org#FormalOrganization> ;
@@ -2227,7 +2227,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                      :seeXML "Auftragsnummer_Lieferant" .
 
 
-###  https://purl.org/edifact-ontology#originatorReference
+###  https://purl.org/edifact/ontology#originatorReference
 :originatorReference rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/identifier> ;
                      rdfs:domain :InvoiceContent ;
@@ -2237,7 +2237,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                      :seeXML "Referenz_des_Absenders" .
 
 
-###  https://purl.org/edifact-ontology#otherServiceInformation
+###  https://purl.org/edifact/ontology#otherServiceInformation
 :otherServiceInformation rdf:type owl:DatatypeProperty ;
                          rdfs:subPropertyOf owl:topDataProperty ;
                          rdfs:domain :InvoiceContent ;
@@ -2247,7 +2247,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                          :seeXML "Andere_Serviceinformationen" .
 
 
-###  https://purl.org/edifact-ontology#partNumberBuyer
+###  https://purl.org/edifact/ontology#partNumberBuyer
 :partNumberBuyer rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf :noteNumber ;
                  rdfs:domain :InvoiceContent ;
@@ -2257,17 +2257,17 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                  :seeXML "Teilnummer_des_Kaeufers" .
 
 
-###  https://purl.org/edifact-ontology#paymentCondition
+###  https://purl.org/edifact/ontology#paymentCondition
 :paymentCondition rdf:type owl:DatatypeProperty ;
                   rdfs:domain :InvoiceContent ;
                   rdfs:range xsd:string ;
                   rdfs:comment "Type of the payment terms" ;
                   rdfs:label "paymentCondition"@en ;
-                  :seeEANCOMD96A 4279 ;
+                  :seeEDIFACT 4279 ;
                   :seeXML "ZahlungsbedingungsArt" .
 
 
-###  https://purl.org/edifact-ontology#paymentCurrency
+###  https://purl.org/edifact/ontology#paymentCurrency
 :paymentCurrency rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf <http://schema.org/currency> ;
                  rdfs:domain :InvoiceContent ;
@@ -2277,7 +2277,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                  :seeXML "WaehrungZahlung" .
 
 
-###  https://purl.org/edifact-ontology#paymentReference
+###  https://purl.org/edifact/ontology#paymentReference
 :paymentReference rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/identifier> ;
                   rdfs:domain :InvoiceContent ;
@@ -2287,7 +2287,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                   :seeXML "Zahlungsreferenz" .
 
 
-###  https://purl.org/edifact-ontology#percentage
+###  https://purl.org/edifact/ontology#percentage
 :percentage rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf owl:topDataProperty ;
             rdfs:domain :InvoiceContent ;
@@ -2296,7 +2296,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
             rdfs:label "percentage"@en .
 
 
-###  https://purl.org/edifact-ontology#positionLineNumber
+###  https://purl.org/edifact/ontology#positionLineNumber
 :positionLineNumber rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf :noteNumber ;
                     rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -2306,7 +2306,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                     :seeXML "Positionszeilennummer" .
 
 
-###  https://purl.org/edifact-ontology#priceAndDeliveryCondition
+###  https://purl.org/edifact/ontology#priceAndDeliveryCondition
 :priceAndDeliveryCondition rdf:type owl:DatatypeProperty ;
                            rdfs:subPropertyOf owl:topDataProperty ;
                            rdfs:domain :InvoiceDetails ;
@@ -2316,7 +2316,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                            :seeXML "PreisUndAuslieferungsbedingung" .
 
 
-###  https://purl.org/edifact-ontology#priceCondition
+###  https://purl.org/edifact/ontology#priceCondition
 :priceCondition rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf owl:topDataProperty ;
                 rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -2326,7 +2326,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                 :seeXML "Preis_Bedingungen" .
 
 
-###  https://purl.org/edifact-ontology#priceCurrency
+###  https://purl.org/edifact/ontology#priceCurrency
 :priceCurrency rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf <http://schema.org/currency> ;
                rdfs:domain :InvoiceContent ;
@@ -2336,7 +2336,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                :seeXML "WaehrungPreisangabe" .
 
 
-###  https://purl.org/edifact-ontology#priceListNumber
+###  https://purl.org/edifact/ontology#priceListNumber
 :priceListNumber rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf :noteNumber ;
                  rdfs:domain :InvoiceContent ;
@@ -2346,7 +2346,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                  :seeXML "Nummer_der_Preisliste" .
 
 
-###  https://purl.org/edifact-ontology#proformaInvoiceNumber
+###  https://purl.org/edifact/ontology#proformaInvoiceNumber
 :proformaInvoiceNumber rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf :noteNumber ;
                        rdfs:domain :InvoiceDetails ;
@@ -2356,7 +2356,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                        :seeXML "Proforma_Rechnungsnummer" .
 
 
-###  https://purl.org/edifact-ontology#promotionalVariantNumber
+###  https://purl.org/edifact/ontology#promotionalVariantNumber
 :promotionalVariantNumber rdf:type owl:DatatypeProperty ;
                           rdfs:subPropertyOf :noteNumber ;
                           rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -2366,7 +2366,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                           :seeXML "Nummer_der_Aktionsvariante" .
 
 
-###  https://purl.org/edifact-ontology#purchasingInformation
+###  https://purl.org/edifact/ontology#purchasingInformation
 :purchasingInformation rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf owl:topDataProperty ;
                        rdfs:domain :InvoiceContent ;
@@ -2376,7 +2376,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                        :seeXML "Beschaffungsinformation" .
 
 
-###  https://purl.org/edifact-ontology#quantity
+###  https://purl.org/edifact/ontology#quantity
 :quantity rdf:type owl:DatatypeProperty ;
           rdfs:subPropertyOf owl:topDataProperty ;
           rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -2385,7 +2385,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
           rdfs:label "quantity"@en .
 
 
-###  https://purl.org/edifact-ontology#receiptGoodsDate
+###  https://purl.org/edifact/ontology#receiptGoodsDate
 :receiptGoodsDate rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> ;
                   rdfs:domain :InvoiceContent ;
@@ -2395,7 +2395,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                   :seeXML "Wareneingangsdatum" .
 
 
-###  https://purl.org/edifact-ontology#receivingAdviceNumber
+###  https://purl.org/edifact/ontology#receivingAdviceNumber
 :receivingAdviceNumber rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf :noteNumber ;
                        rdfs:domain :InvoiceContent ;
@@ -2405,17 +2405,17 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                        :seeXML "Wareneingangsmeldung_Nummer" .
 
 
-###  https://purl.org/edifact-ontology#recipientIndicator
+###  https://purl.org/edifact/ontology#recipientIndicator
 :recipientIndicator rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf owl:topDataProperty ;
-                    rdfs:domain :EANCOM-Structure ;
+                    rdfs:domain :EDIFACT-Structure ;
                     rdfs:range xsd:string ;
                     rdfs:comment "Indiactor whos the recipient of the message" ;
                     rdfs:label "recipientIndicator"@en ;
                     :seeXML "D_0010" .
 
 
-###  https://purl.org/edifact-ontology#recivedAndAcceptedQuantity
+###  https://purl.org/edifact/ontology#recivedAndAcceptedQuantity
 :recivedAndAcceptedQuantity rdf:type owl:DatatypeProperty ;
                             rdfs:subPropertyOf :quantity ;
                             rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -2425,7 +2425,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                             :seeXML "Menge_Erhalten_und_akzeptiert" .
 
 
-###  https://purl.org/edifact-ontology#recivedAndAcceptedQuantityWithUnit
+###  https://purl.org/edifact/ontology#recivedAndAcceptedQuantityWithUnit
 :recivedAndAcceptedQuantityWithUnit rdf:type owl:DatatypeProperty ;
                                     rdfs:subPropertyOf :quantity ;
                                     rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -2435,7 +2435,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                                     :seeXML "Erhalten_und_akzeptiert_Einheit" .
 
 
-###  https://purl.org/edifact-ontology#referenceDate
+###  https://purl.org/edifact/ontology#referenceDate
 :referenceDate rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> ;
                rdfs:domain :InvoiceContent ;
@@ -2445,7 +2445,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                :seeXML "Referenzdatum" .
 
 
-###  https://purl.org/edifact-ontology#referenceNumberBusinessContactExtractEANCode
+###  https://purl.org/edifact/ontology#referenceNumberBusinessContactExtractEANCode
 :referenceNumberBusinessContactExtractEANCode rdf:type owl:DatatypeProperty ;
                                               rdfs:subPropertyOf :noteNumber ;
                                               rdfs:domain <http://www.w3.org/ns/org#FormalOrganization> ;
@@ -2455,7 +2455,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                                               :seeXML "Referenznummer_zu_einem_Geschaeftskontauszug_EAN_Code" .
 
 
-###  https://purl.org/edifact-ontology#referenceNumberCustomer
+###  https://purl.org/edifact/ontology#referenceNumberCustomer
 :referenceNumberCustomer rdf:type owl:DatatypeProperty ;
                          rdfs:subPropertyOf :noteNumber ;
                          rdfs:domain <http://www.w3.org/ns/org#FormalOrganization> ;
@@ -2465,7 +2465,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                          :seeXML "Referenzsnummer_des_Kunden" .
 
 
-###  https://purl.org/edifact-ontology#relatedDocumentNumber
+###  https://purl.org/edifact/ontology#relatedDocumentNumber
 :relatedDocumentNumber rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/identifier> ;
                        rdfs:domain :InvoiceContent ;
@@ -2475,18 +2475,18 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                        :seeXML "zugehoerige_Dokumentennummer" .
 
 
-###  https://purl.org/edifact-ontology#releaseNumberMessageType
+###  https://purl.org/edifact/ontology#releaseNumberMessageType
 :releaseNumberMessageType rdf:type owl:DatatypeProperty ;
                           rdfs:subPropertyOf owl:topDataProperty ;
-                          rdfs:domain :EANCOM-Structure ;
+                          rdfs:domain :EDIFACT-Structure ;
                           rdfs:range xsd:string ;
                           rdfs:comment "Release number within the current message version number." ;
                           rdfs:label "releaseNumberMessageType"@en ;
-                          :seeEANCOMD96A "D_0054" ;
+                          :seeEDIFACT "D_0054" ;
                           :seeXML "D_0054" .
 
 
-###  https://purl.org/edifact-ontology#reportingInformation
+###  https://purl.org/edifact/ontology#reportingInformation
 :reportingInformation rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf owl:topDataProperty ;
                       rdfs:domain :InvoiceContent ;
@@ -2496,7 +2496,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                       :seeXML "Meldeinformationen" .
 
 
-###  https://purl.org/edifact-ontology#returnQuantity
+###  https://purl.org/edifact/ontology#returnQuantity
 :returnQuantity rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf :quantity ;
                 rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -2506,7 +2506,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                 :seeXML "Menge_Retour" .
 
 
-###  https://purl.org/edifact-ontology#returnQuantityWithUnit
+###  https://purl.org/edifact/ontology#returnQuantityWithUnit
 :returnQuantityWithUnit rdf:type owl:DatatypeProperty ;
                         rdfs:subPropertyOf :quantity ;
                         rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -2516,7 +2516,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                         :seeXML "Retourmenge_Einheit" .
 
 
-###  https://purl.org/edifact-ontology#sellersReferenceNumber
+###  https://purl.org/edifact/ontology#sellersReferenceNumber
 :sellersReferenceNumber rdf:type owl:DatatypeProperty ;
                         rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/identifier> ;
                         rdfs:domain <http://www.w3.org/ns/org#FormalOrganization> ;
@@ -2526,16 +2526,16 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                         :seeXML "Referenznummer_des_Verkaeufers" .
 
 
-###  https://purl.org/edifact-ontology#senderIndicator
+###  https://purl.org/edifact/ontology#senderIndicator
 :senderIndicator rdf:type owl:DatatypeProperty ;
-                 rdfs:domain :EANCOM-Structure ;
+                 rdfs:domain :EDIFACT-Structure ;
                  rdfs:range xsd:string ;
                  rdfs:comment "Indicator who the sender is" ;
                  rdfs:label "senderIndicator"@en ;
                  :seeXML "D_0004" .
 
 
-###  https://purl.org/edifact-ontology#specificationNumber
+###  https://purl.org/edifact/ontology#specificationNumber
 :specificationNumber rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf :noteNumber ;
                      rdfs:domain :InvoiceContent ;
@@ -2545,7 +2545,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                      :seeXML "Spezifikationsnummer" .
 
 
-###  https://purl.org/edifact-ontology#supplierNote
+###  https://purl.org/edifact/ontology#supplierNote
 :supplierNote rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf owl:topDataProperty ;
               rdfs:domain :InvoiceContent ;
@@ -2555,27 +2555,27 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
               :seeXML "Lieferantenhinweis" .
 
 
-###  https://purl.org/edifact-ontology#synatxIdentifier
+###  https://purl.org/edifact/ontology#synatxIdentifier
 :synatxIdentifier rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf owl:topDataProperty ;
-                  rdfs:domain :EANCOM-Structure ;
+                  rdfs:domain :EDIFACT-Structure ;
                   rdfs:range xsd:string ;
                   rdfs:comment "Identification of the used synatx" ;
                   rdfs:label "synatxIdentifier"@en ;
                   :seeXML "SynatxKennung" .
 
 
-###  https://purl.org/edifact-ontology#synatxVersion
+###  https://purl.org/edifact/ontology#synatxVersion
 :synatxVersion rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf owl:topDataProperty ;
-               rdfs:domain :EANCOM-Structure ;
+               rdfs:domain :EDIFACT-Structure ;
                rdfs:range xsd:integer ;
                rdfs:comment "Version of the used syntax" ;
                rdfs:label "synatxVersion"@en ;
                :seeXML "SyntaxVersion" .
 
 
-###  https://purl.org/edifact-ontology#taxPeriod
+###  https://purl.org/edifact/ontology#taxPeriod
 :taxPeriod rdf:type owl:DatatypeProperty ;
            rdfs:subPropertyOf :timePeriod ;
            rdfs:domain :InvoiceContent ;
@@ -2585,7 +2585,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
            :seeXML "Steuerperiode" .
 
 
-###  https://purl.org/edifact-ontology#timePeriod
+###  https://purl.org/edifact/ontology#timePeriod
 :timePeriod rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf owl:topDataProperty ;
             rdfs:domain :InvoiceContent ;
@@ -2594,17 +2594,17 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
             rdfs:label "timePeriod"@en .
 
 
-###  https://purl.org/edifact-ontology#totalNumberOfSegments
+###  https://purl.org/edifact/ontology#totalNumberOfSegments
 :totalNumberOfSegments rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf owl:topDataProperty ;
-                       rdfs:domain :EANCOM-Structure ;
+                       rdfs:domain :EDIFACT-Structure ;
                        rdfs:range xsd:integer ;
                        rdfs:comment "The total number of the segments" ;
                        rdfs:label "totalNumberOfSegments"@en ;
                        :seeXML "D_0074" .
 
 
-###  https://purl.org/edifact-ontology#unitPriceBasis
+###  https://purl.org/edifact/ontology#unitPriceBasis
 :unitPriceBasis rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf owl:topDataProperty ;
                 rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -2614,7 +2614,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                 :seeXML "D_5284" .
 
 
-###  https://purl.org/edifact-ontology#universalProductCode
+###  https://purl.org/edifact/ontology#universalProductCode
 :universalProductCode rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf :noteNumber ;
                       rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -2624,7 +2624,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                       :seeXML "Universal_Prodcut_Code" .
 
 
-###  https://purl.org/edifact-ontology#valutaDate
+###  https://purl.org/edifact/ontology#valutaDate
 :valutaDate rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> ;
             rdfs:domain :InvoiceContent ;
@@ -2634,18 +2634,18 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
             :seeXML "ValutaDatum" .
 
 
-###  https://purl.org/edifact-ontology#versionNumberMessageType
+###  https://purl.org/edifact/ontology#versionNumberMessageType
 :versionNumberMessageType rdf:type owl:DatatypeProperty ;
                           rdfs:subPropertyOf owl:topDataProperty ;
-                          rdfs:domain :EANCOM-Structure ;
+                          rdfs:domain :EDIFACT-Structure ;
                           rdfs:range xsd:string ;
                           rdfs:comment "Version number of a message type" ;
                           rdfs:label "versionNumberMessageType"@en ;
-                          :seeEANCOMD96A "D_0052" ;
+                          :seeEDIFACT "D_0052" ;
                           :seeXML "D_0052" .
 
 
-###  https://purl.org/edifact-ontology#widthDimension
+###  https://purl.org/edifact/ontology#widthDimension
 :widthDimension rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf owl:topDataProperty ;
                 rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -2655,7 +2655,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                 :seeXML "Breitenabmessung" .
 
 
-###  https://purl.org/edifact-ontology#withoutCalculationQuantity
+###  https://purl.org/edifact/ontology#withoutCalculationQuantity
 :withoutCalculationQuantity rdf:type owl:DatatypeProperty ;
                             rdfs:subPropertyOf :quantity ;
                             rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -2665,7 +2665,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                             :seeXML "Menge_ohne_Berechnung" .
 
 
-###  https://purl.org/edifact-ontology#withoutCalculationQuantityWithUnit
+###  https://purl.org/edifact/ontology#withoutCalculationQuantityWithUnit
 :withoutCalculationQuantityWithUnit rdf:type owl:DatatypeProperty ;
                                     rdfs:subPropertyOf :quantity ;
                                     rdfs:domain <https://purl.org/p2p-o/item#Item> ;
@@ -2761,7 +2761,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                                                  rdfs:range xsd:string ;
                                                  rdfs:comment "Name of a party involved in the invoice" ;
                                                  rdfs:label "formalName"@en ;
-                                                 :seeEANCOMD96A 3036 ;
+                                                 :seeEDIFACT 3036 ;
                                                  :seeXML "D_3036" .
 
 
@@ -2789,65 +2789,65 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                                                                                                rdfs:label "AgentRole"@en .
 
 
-###  https://purl.org/edifact-ontology#BrokerSalesOfficeRole
+###  https://purl.org/edifact/ontology#BrokerSalesOfficeRole
 :BrokerSalesOfficeRole rdf:type owl:Class ;
                        rdfs:subClassOf <https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#AgentRole> ;
                        rdfs:comment "The role of a party acting in the name of the seller as broker or as sales office." ;
                        rdfs:label "BrokerSalesOfficeRole"@en .
 
 
-###  https://purl.org/edifact-ontology#BuyerRole
+###  https://purl.org/edifact/ontology#BuyerRole
 :BuyerRole rdf:type owl:Class ;
            rdfs:subClassOf <https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#AgentRole> ;
            rdfs:comment "The role of the party to which articles are sold" ;
            rdfs:label "BuyerRole"@en .
 
 
-###  https://purl.org/edifact-ontology#CalculateDeliverToRole
+###  https://purl.org/edifact/ontology#CalculateDeliverToRole
 :CalculateDeliverToRole rdf:type owl:Class ;
                         rdfs:subClassOf <https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#AgentRole> ;
                         rdfs:comment "The role of the party receiving goods and relevant invoice" ;
                         rdfs:label "CalculateDeliverToRole"@en .
 
 
-###  https://purl.org/edifact-ontology#CentralRegulatorRole
+###  https://purl.org/edifact/ontology#CentralRegulatorRole
 :CentralRegulatorRole rdf:type owl:Class ;
                       rdfs:subClassOf <https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#AgentRole> ;
                       rdfs:comment "The role of the party which is the central regulator" ;
                       rdfs:label "CentralRegulatorRole"@en .
 
 
-###  https://purl.org/edifact-ontology#DeliveryPartyRole
+###  https://purl.org/edifact/ontology#DeliveryPartyRole
 :DeliveryPartyRole rdf:type owl:Class ;
                    rdfs:subClassOf <https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#AgentRole> ;
                    rdfs:comment "The role of the party to which goods should be delivered, if not identical with consignee." ;
                    rdfs:label "DeliveryPartyRole"@en .
 
 
-###  https://purl.org/edifact-ontology#DespatchPartyRole
+###  https://purl.org/edifact/ontology#DespatchPartyRole
 :DespatchPartyRole rdf:type owl:Class ;
                    rdfs:subClassOf <https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#AgentRole> ;
                    rdfs:comment "The role of the party where goods are collected or taken over by the carrier (i.e. if other than consignor)" ;
                    rdfs:label "DespatchPartyRole"@en .
 
 
-###  https://purl.org/edifact-ontology#EANCOM-Structure
-:EANCOM-Structure rdf:type owl:Class ;
-                  owl:disjointWith :InvoiceContent .
+###  https://purl.org/edifact/ontology#EDIFACT-Structure
+:EDIFACT-Structure rdf:type owl:Class ;
+                   owl:disjointWith :InvoiceContent .
 
 
-###  https://purl.org/edifact-ontology#FinalConsigneeRole
+###  https://purl.org/edifact/ontology#FinalConsigneeRole
 :FinalConsigneeRole rdf:type owl:Class ;
                     rdfs:subClassOf <https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#AgentRole> ;
                     rdfs:comment "The role of the party who has been designated on the invoice or packing list as the final recipient of the stated merchandise." ;
                     rdfs:label "FinalConsigneeRole"@en .
 
 
-###  https://purl.org/edifact-ontology#InvoiceContent
+###  https://purl.org/edifact/ontology#InvoiceContent
 :InvoiceContent rdf:type owl:Class .
 
 
-###  https://purl.org/edifact-ontology#InvoiceDetails
+###  https://purl.org/edifact/ontology#InvoiceDetails
 :InvoiceDetails rdf:type owl:Class ;
                 rdfs:subClassOf :InvoiceContent ;
                 owl:disjointWith <https://purl.org/p2p-o/item#Item> ;
@@ -2855,98 +2855,98 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                 rdfs:label "InvoiceDetails"@en .
 
 
-###  https://purl.org/edifact-ontology#InvoiceeRole
+###  https://purl.org/edifact/ontology#InvoiceeRole
 :InvoiceeRole rdf:type owl:Class ;
               rdfs:subClassOf <https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#AgentRole> ;
               rdfs:comment "The role of the party to whom an invoice is issued" ;
               rdfs:label "InvoiceeRole"@en .
 
 
-###  https://purl.org/edifact-ontology#InvoicingPartyRole
+###  https://purl.org/edifact/ontology#InvoicingPartyRole
 :InvoicingPartyRole rdf:type owl:Class ;
                     rdfs:subClassOf <https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#AgentRole> ;
                     rdfs:comment "The role of the party issuing an invoice" ;
                     rdfs:label "InvoicingPartyRole"@en .
 
 
-###  https://purl.org/edifact-ontology#PayeeRole
+###  https://purl.org/edifact/ontology#PayeeRole
 :PayeeRole rdf:type owl:Class ;
            rdfs:subClassOf <https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#AgentRole> ;
            rdfs:comment "The role of the party initiating payment" ;
            rdfs:label "PayeeRole"@en .
 
 
-###  https://purl.org/edifact-ontology#RecipientOfInvoiceRegulationRole
+###  https://purl.org/edifact/ontology#RecipientOfInvoiceRegulationRole
 :RecipientOfInvoiceRegulationRole rdf:type owl:Class ;
                                   rdfs:subClassOf <https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#AgentRole> ;
                                   rdfs:comment "The role of the party to whom payment for a commercial invoice or bill should be remitted." ;
                                   rdfs:label "RecipientOfInvoiceRegulationRole"@en .
 
 
-###  https://purl.org/edifact-ontology#RecipientRole
+###  https://purl.org/edifact/ontology#RecipientRole
 :RecipientRole rdf:type owl:Class ;
                rdfs:subClassOf <https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#AgentRole> ;
                rdfs:comment "The role of the party to which goods are consigned." ;
                rdfs:label "RecipientRole"@en .
 
 
-###  https://purl.org/edifact-ontology#RegulatorRole
+###  https://purl.org/edifact/ontology#RegulatorRole
 :RegulatorRole rdf:type owl:Class ;
                rdfs:subClassOf <https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#AgentRole> ;
                rdfs:comment "The role of the party which is the regulator of the invoice" ;
                rdfs:label "RegulatorRole"@en .
 
 
-###  https://purl.org/edifact-ontology#RepresentativeOfSupplierRole
+###  https://purl.org/edifact/ontology#RepresentativeOfSupplierRole
 :RepresentativeOfSupplierRole rdf:type owl:Class ;
                               rdfs:subClassOf <https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#AgentRole> ;
                               rdfs:comment "The role of the party representing the seller for the purpose of the trade transaction." ;
                               rdfs:label "RepresentativeOfSupplierRole"@en .
 
 
-###  https://purl.org/edifact-ontology#SalesAgentRole
+###  https://purl.org/edifact/ontology#SalesAgentRole
 :SalesAgentRole rdf:type owl:Class ;
                 rdfs:subClassOf <https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#AgentRole> ;
                 rdfs:comment "The role of the third party who arranged the purchase of merchandise on behalf of the actual buyer" ;
                 rdfs:label "SalesAgentRole"@en .
 
 
-###  https://purl.org/edifact-ontology#SellerRole
+###  https://purl.org/edifact/ontology#SellerRole
 :SellerRole rdf:type owl:Class ;
             rdfs:subClassOf <https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#AgentRole> ;
             rdfs:comment "The role of the party selling merchandise to a buyer." ;
             rdfs:label "SellerRole"@en .
 
 
-###  https://purl.org/edifact-ontology#SendToRole
+###  https://purl.org/edifact/ontology#SendToRole
 :SendToRole rdf:type owl:Class ;
             rdfs:subClassOf <https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#AgentRole> ;
             rdfs:comment "The role of the party to where goods will be or have been shipped" ;
             rdfs:label "SendToRole"@en .
 
 
-###  https://purl.org/edifact-ontology#SupplierRole
+###  https://purl.org/edifact/ontology#SupplierRole
 :SupplierRole rdf:type owl:Class ;
               rdfs:subClassOf <https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#AgentRole> ;
               rdfs:comment "The role of the party which manufactures or otherwise has possession of goods, and consigns or makes them available in trade." ;
               rdfs:label "SupplierRole"@en .
 
 
-###  https://purl.org/edifact-ontology#SuppliersCompanyHeadquarterRole
+###  https://purl.org/edifact/ontology#SuppliersCompanyHeadquarterRole
 :SuppliersCompanyHeadquarterRole rdf:type owl:Class ;
                                  rdfs:subClassOf <https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#AgentRole> ;
                                  rdfs:comment "The role of the party's headquarters which manufactures or otherwise has possession of goods, and consigns or makes them available in trade." ;
                                  rdfs:label "SuppliersCompanyHeadquarterRole"@en .
 
 
-###  https://purl.org/edifact-ontology#WarehouseNumberRole
+###  https://purl.org/edifact/ontology#WarehouseNumberRole
 :WarehouseNumberRole rdf:type owl:Class ;
                      rdfs:subClassOf <https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#AgentRole> ;
                      rdfs:comment "The role of the party that runs the Warehouse" ;
                      rdfs:label "WarehouseNumberRole"@en .
 
 
-###  https://purl.org/edifact-ontology#WholesalerRole
+###  https://purl.org/edifact/ontology#WholesalerRole
 :WholesalerRole rdf:type owl:Class ;
                 rdfs:subClassOf <https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#AgentRole> ;
                 rdfs:comment "The role of the party that is the wholesaler" ;
@@ -2972,8 +2972,8 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
                                               rdfs:label "FormalOrganization"@en .
 
 
-:EANCOM-Structure rdfs:comment "Contains all the information which are necessary for the invoice to be a valid EDIFACT Invoice" ;
-                  rdfs:label "EANCOM-Structure"@en .
+:EDIFACT-Structure rdfs:comment "Contains all the information which are necessary for the invoice to be a valid EDIFACT Invoice" ;
+                   rdfs:label "EDIFACT-Structure"@en .
 
 
 :InvoiceContent rdfs:comment "Contains information which an both the displayed in the Item class and the invoice details class" ;
