@@ -7,8 +7,17 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:document="https://purl.org/p2p-o/document#"
-     xmlns:ontology="https://purl.org/edifact/ontology#">
-    <owl:Ontology rdf:about="https://purl.org/edifact/ontology"/>
+     xmlns:dcterms= "http://purl.org/dc/terms/"
+     xmlns:ontology="https://purl.org/edifact/ontology#"
+     xmlns:foaf= "http://xmlns.com/foaf/0.1/">
+    <owl:Ontology rdf:about="https://purl.org/edifact/ontology">
+        <rdfs:comment>An Ontology for EDIFACT Messages</rdfs:comment> 
+        <rdfs:label>EDIFACT Ontology</rdfs:label>
+        <dcterms:creator>Johannes Maekelburg</dcterms:creator>
+        <dcterms:creator rdf:resource= "https://www.professoren.tum.de/acosta-deibe-maribel">Maribel Acosta</dcterms:creator>
+        <foaf:maker>Johannes Mäkelburg</foaf:maker>
+        <foaf:maker rdf:resource= "https://www.professoren.tum.de/acosta-deibe-maribel">Maribel Acosta</foaf:maker>
+    </owl:Ontology>
 
 
     <!-- 
