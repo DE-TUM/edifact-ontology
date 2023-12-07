@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://purl.org/edifact/ontology#"
      xml:base="https://purl.org/edifact/ontology"
-     xmlns:org="http://www.w3.org/ns/org#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -55,15 +54,6 @@
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#inverseOf">
         <rdfs:label xml:lang="en">inverseOf</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://www.w3.org/ns/org#FormalOrganization -->
-
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/org#FormalOrganization">
-        <rdfs:subPropertyOf rdf:resource="https://purl.org/p2p-o/document#E-Invoice"/>
     </owl:AnnotationProperty>
     
 
@@ -3941,7 +3931,10 @@
     <!-- http://www.w3.org/ns/org#FormalOrganization -->
 
 
-    <owl:Class rdf:about="http://www.w3.org/ns/org#FormalOrganization"/>
+    <owl:Class rdf:about="http://www.w3.org/ns/org#FormalOrganization">
+        <rdfs:comment>The class containing information about the perfomed role of the involved organizations</rdfs:comment>
+        <rdfs:label>FormalOrganization</rdfs:label>
+    </owl:Class>
     
 
 
@@ -4241,16 +4234,12 @@
      -->
 
 
-    <rdf:Description rdf:about="http://www.w3.org/ns/org#FormalOrganization">
-        <rdfs:comment>The class which contains information about the perfomed role of the involved organizations</rdfs:comment>
-        <rdfs:label xml:lang="en">FormalOrganization</rdfs:label>
-    </rdf:Description>
     <rdf:Description rdf:about="https://purl.org/edifact/ontology#EDIFACT-Structure">
         <rdfs:comment>Contains all the information which are necessary for the invoice to be a valid EDIFACT Invoice</rdfs:comment>
-        <rdfs:label xml:lang="en">EDIFACT-Structure</rdfs:label>
+        <rdfs:label>EDIFACT-Structure</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="https://purl.org/edifact/ontology#InvoiceContent">
-        <rdfs:comment>Contains information which an both the displayed in the Item class and the invoice details class</rdfs:comment>
+        <rdfs:comment xml:lang="en">Defined as the union of the classes Item and InvoiceDetails</rdfs:comment>
         <rdfs:label xml:lang="en">InvoiceContent</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="https://purl.org/p2p-o/document#E-Invoice">

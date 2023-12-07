@@ -229,16 +229,12 @@
   } ]
 }, {
   "@id" : "http://www.w3.org/ns/org#FormalOrganization",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty", "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The class which contains information about the perfomed role of the involved organizations"
+    "@value" : "The class containing information about the perfomed role of the involved organizations"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
     "@value" : "FormalOrganization"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://purl.org/p2p-o/document#E-Invoice"
   } ]
 }, {
   "@id" : "https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#AgentRole",
@@ -423,7 +419,6 @@
     "@value" : "Contains all the information which are necessary for the invoice to be a valid EDIFACT Invoice"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
     "@value" : "EDIFACT-Structure"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
@@ -449,7 +444,8 @@
   "@id" : "https://purl.org/edifact/ontology#InvoiceContent",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty", "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Contains information which an both the displayed in the Item class and the invoice details class"
+    "@language" : "en",
+    "@value" : "Defined as the union of the classes Item and InvoiceDetails"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",

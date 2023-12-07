@@ -31,11 +31,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
               rdfs:label "inverseOf"@en .
 
 
-###  http://www.w3.org/ns/org#FormalOrganization
-<http://www.w3.org/ns/org#FormalOrganization> rdf:type owl:AnnotationProperty ;
-                                              rdfs:subPropertyOf <https://purl.org/p2p-o/document#E-Invoice> .
-
-
 ###  https://purl.org/edifact/ontology#EDIFACT-Structure
 :EDIFACT-Structure rdf:type owl:AnnotationProperty ;
                    rdfs:subPropertyOf <https://purl.org/p2p-o/document#E-Invoice> .
@@ -2780,7 +2775,9 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
 #################################################################
 
 ###  http://www.w3.org/ns/org#FormalOrganization
-<http://www.w3.org/ns/org#FormalOrganization> rdf:type owl:Class .
+<http://www.w3.org/ns/org#FormalOrganization> rdf:type owl:Class ;
+                                              rdfs:comment "The class containing information about the perfomed role of the involved organizations" ;
+                                              rdfs:label "FormalOrganization" .
 
 
 ###  https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#AgentRole
@@ -2968,15 +2965,11 @@ owl:inverseOf rdf:type owl:AnnotationProperty ;
 #    Annotations
 #################################################################
 
-<http://www.w3.org/ns/org#FormalOrganization> rdfs:comment "The class which contains information about the perfomed role of the involved organizations" ;
-                                              rdfs:label "FormalOrganization"@en .
-
-
 :EDIFACT-Structure rdfs:comment "Contains all the information which are necessary for the invoice to be a valid EDIFACT Invoice" ;
-                   rdfs:label "EDIFACT-Structure"@en .
+                   rdfs:label "EDIFACT-Structure" .
 
 
-:InvoiceContent rdfs:comment "Contains information which an both the displayed in the Item class and the invoice details class" ;
+:InvoiceContent rdfs:comment "Defined as the union of the classes Item and InvoiceDetails"@en ;
                 rdfs:label "InvoiceContent"@en .
 
 

@@ -23,13 +23,10 @@
 <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/2000/01/rdf-schema#label> "inverseOf"@en .
 # 
-# http://www.w3.org/ns/org#FormalOrganization
-<http://www.w3.org/ns/org#FormalOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://www.w3.org/ns/org#FormalOrganization> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://purl.org/p2p-o/document#E-Invoice> .
-# 
 # https://purl.org/edifact/ontology#EDIFACT-Structure
 <https://purl.org/edifact/ontology#EDIFACT-Structure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 <https://purl.org/edifact/ontology#EDIFACT-Structure> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://purl.org/p2p-o/document#E-Invoice> .
+<https://purl.org/p2p-o/document#E-Invoice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # https://purl.org/edifact/ontology#InvoiceContent
 <https://purl.org/edifact/ontology#InvoiceContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -44,7 +41,6 @@
 <https://purl.org/edifact/ontology#seeXML> <http://www.w3.org/2000/01/rdf-schema#label> "seeXML"@en .
 # 
 # https://purl.org/p2p-o/document#E-Invoice
-<https://purl.org/p2p-o/document#E-Invoice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # 
 # 
@@ -2511,6 +2507,8 @@
 # 
 # http://www.w3.org/ns/org#FormalOrganization
 <http://www.w3.org/ns/org#FormalOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/org#FormalOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "The class containing information about the perfomed role of the involved organizations" .
+<http://www.w3.org/ns/org#FormalOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "FormalOrganization" .
 # 
 # https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#AgentRole
 <https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#AgentRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -2675,13 +2673,10 @@
 # #################################################################
 # 
 # 
-<http://www.w3.org/ns/org#FormalOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "The class which contains information about the perfomed role of the involved organizations" .
-<http://www.w3.org/ns/org#FormalOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "FormalOrganization"@en .
-# 
 <https://purl.org/edifact/ontology#EDIFACT-Structure> <http://www.w3.org/2000/01/rdf-schema#comment> "Contains all the information which are necessary for the invoice to be a valid EDIFACT Invoice" .
-<https://purl.org/edifact/ontology#EDIFACT-Structure> <http://www.w3.org/2000/01/rdf-schema#label> "EDIFACT-Structure"@en .
+<https://purl.org/edifact/ontology#EDIFACT-Structure> <http://www.w3.org/2000/01/rdf-schema#label> "EDIFACT-Structure" .
 # 
-<https://purl.org/edifact/ontology#InvoiceContent> <http://www.w3.org/2000/01/rdf-schema#comment> "Contains information which an both the displayed in the Item class and the invoice details class" .
+<https://purl.org/edifact/ontology#InvoiceContent> <http://www.w3.org/2000/01/rdf-schema#comment> "Defined as the union of the classes Item and InvoiceDetails"@en .
 <https://purl.org/edifact/ontology#InvoiceContent> <http://www.w3.org/2000/01/rdf-schema#label> "InvoiceContent"@en .
 # 
 <https://purl.org/p2p-o/document#E-Invoice> <http://www.w3.org/2000/01/rdf-schema#comment> "The root class of each invoice. Contains all the linked classes with information about the invoice" .
