@@ -70,7 +70,7 @@
 
 
     <owl:AnnotationProperty rdf:about="https://purl.org/edifact/ontology#EDIFACT-Structure">
-        <rdfs:subPropertyOf rdf:resource="https://purl.org/p2p-o/document#E-Invoice"/>
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#E-Invoice"/>
     </owl:AnnotationProperty>
     
 
@@ -79,7 +79,7 @@
 
 
     <owl:AnnotationProperty rdf:about="https://purl.org/edifact/ontology#InvoiceContent">
-        <rdfs:subPropertyOf rdf:resource="https://purl.org/p2p-o/document#E-Invoice"/>
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#E-Invoice"/>
     </owl:AnnotationProperty>
     
 
@@ -102,10 +102,10 @@
     
 
 
-    <!-- https://purl.org/p2p-o/document#E-Invoice -->
+    <!-- https://purl.org/edifact/ontology#E-Invoice -->
 
 
-    <owl:AnnotationProperty rdf:about="https://purl.org/p2p-o/document#E-Invoice"/>
+    <owl:AnnotationProperty rdf:about="https://purl.org/edifact/ontology#E-Invoice"/>
     
 
 
@@ -128,7 +128,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <owl:inverseOf rdf:resource="https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#performsAgentRole"/>
         <rdfs:domain rdf:resource="https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#AgentRole"/>
-        <rdfs:range rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:range rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:comment xml:lang="en">shows by which formal organization a agent role is performed</rdfs:comment>
         <rdfs:label xml:lang="en">isPerformedBy</rdfs:label>
     </owl:ObjectProperty>
@@ -142,7 +142,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <owl:inverseOf rdf:resource="https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#providesAgentRole"/>
         <rdfs:domain rdf:resource="https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#AgentRole"/>
-        <rdfs:range rdf:resource="https://purl.org/p2p-o/document#E-Invoice"/>
+        <rdfs:range rdf:resource="https://purl.org/edifact/ontology#E-Invoice"/>
         <rdfs:comment xml:lang="en">shows by which E-Invoice an agent role is provided</rdfs:comment>
         <rdfs:label xml:lang="en">isProvidedBy</rdfs:label>
     </owl:ObjectProperty>
@@ -154,7 +154,7 @@
 
     <owl:ObjectProperty rdf:about="https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#performsAgentRole">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#AgentRole"/>
         <rdfs:comment>shows which formal organization an agent role performs</rdfs:comment>
         <rdfs:label xml:lang="en">performsAgentRole</rdfs:label>
@@ -167,7 +167,7 @@
 
     <owl:ObjectProperty rdf:about="https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#providesAgentRole">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/document#E-Invoice"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#E-Invoice"/>
         <rdfs:range rdf:resource="https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#AgentRole"/>
         <rdfs:comment xml:lang="en">shows which agnezt roles are provided by an invoice</rdfs:comment>
         <rdfs:label xml:lang="en">providesAgentRole</rdfs:label>
@@ -181,7 +181,7 @@
     <owl:ObjectProperty rdf:about="https://purl.org/edifact/ontology#followsStandard">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <owl:inverseOf rdf:resource="https://purl.org/edifact/ontology#isStandardOf"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/document#E-Invoice"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#E-Invoice"/>
         <rdfs:range rdf:resource="https://purl.org/edifact/ontology#EDIFACT-Structure"/>
         <rdfs:comment>shows the file standard resources the invoice has</rdfs:comment>
         <rdfs:label xml:lang="en">followsStandard</rdfs:label>
@@ -195,7 +195,7 @@
     <owl:ObjectProperty rdf:about="https://purl.org/edifact/ontology#hasInvoiceDetails">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <owl:inverseOf rdf:resource="https://purl.org/edifact/ontology#isInvoiceDetailsOf"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/document#E-Invoice"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#E-Invoice"/>
         <rdfs:range rdf:resource="https://purl.org/edifact/ontology#InvoiceDetails"/>
         <rdfs:comment xml:lang="en">Contains the Invoice Details of an Invoice</rdfs:comment>
         <rdfs:label xml:lang="en">hasInvoiceDetails</rdfs:label>
@@ -209,8 +209,8 @@
     <owl:ObjectProperty rdf:about="https://purl.org/edifact/ontology#hasItem">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <owl:inverseOf rdf:resource="https://purl.org/edifact/ontology#isItemOf"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/document#E-Invoice"/>
-        <rdfs:range rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#E-Invoice"/>
+        <rdfs:range rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:comment xml:lang="en">shows which items are included in an invoice</rdfs:comment>
         <rdfs:label xml:lang="en">hasItem</rdfs:label>
     </owl:ObjectProperty>
@@ -223,7 +223,7 @@
     <owl:ObjectProperty rdf:about="https://purl.org/edifact/ontology#isInvoiceDetailsOf">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#InvoiceDetails"/>
-        <rdfs:range rdf:resource="https://purl.org/p2p-o/document#E-Invoice"/>
+        <rdfs:range rdf:resource="https://purl.org/edifact/ontology#E-Invoice"/>
         <rdfs:comment xml:lang="en">shows to which Invoice the Invoice Details belong</rdfs:comment>
         <rdfs:label xml:lang="en">isInvoiceDetailsOf</rdfs:label>
     </owl:ObjectProperty>
@@ -235,8 +235,8 @@
 
     <owl:ObjectProperty rdf:about="https://purl.org/edifact/ontology#isItemOf">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
-        <rdfs:range rdf:resource="https://purl.org/p2p-o/document#E-Invoice"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
+        <rdfs:range rdf:resource="https://purl.org/edifact/ontology#E-Invoice"/>
         <rdfs:comment xml:lang="en">shows to which Invoice the item belongs</rdfs:comment>
         <rdfs:comment xml:lang="de">zeigt an zu welcher Rechnung der Artikel gehört</rdfs:comment>
         <rdfs:label xml:lang="en">isItemOf</rdfs:label>
@@ -250,7 +250,7 @@
     <owl:ObjectProperty rdf:about="https://purl.org/edifact/ontology#isStandardOf">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#EDIFACT-Structure"/>
-        <rdfs:range rdf:resource="https://purl.org/p2p-o/document#E-Invoice"/>
+        <rdfs:range rdf:resource="https://purl.org/edifact/ontology#E-Invoice"/>
         <rdfs:comment xml:lang="en">shows of which invoice the EDIFACT Structure is</rdfs:comment>
         <rdfs:label xml:lang="en">isStandardOf</rdfs:label>
     </owl:ObjectProperty>
@@ -274,7 +274,7 @@
 
     <owl:DatatypeProperty rdf:about="http://purl.org/cerif/frapo/hasCountryCode">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Cotains the country code name of a party involved in the invoice</rdfs:comment>
         <rdfs:label xml:lang="en">hasCountryCode</rdfs:label>
@@ -316,7 +316,7 @@
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/date">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/document#E-Invoice"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#E-Invoice"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>contains a date</rdfs:comment>
         <rdfs:label xml:lang="en">date</rdfs:label>
@@ -329,7 +329,7 @@
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/identifier">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/document#E-Invoice"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#E-Invoice"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>identifier of a part in the invoice</rdfs:comment>
         <rdfs:label xml:lang="en">identifier</rdfs:label>
@@ -368,7 +368,7 @@
 
     <owl:DatatypeProperty rdf:about="http://schema.org/hasMeasurement">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Value of the measured unit.</rdfs:comment>
         <rdfs:label xml:lang="en">hasMeasurement</rdfs:label>
@@ -382,7 +382,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/vcard/ns#hasStreetAddress">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Cotains the street address of a party involved in the invoice</rdfs:comment>
         <rdfs:label xml:lang="en">hasStreetAddress</rdfs:label>
@@ -395,7 +395,7 @@
 
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/vcard/ns#postalCode">
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Cotains the postal code of a party involved in the invoice</rdfs:comment>
         <rdfs:label xml:lang="en">postalCode</rdfs:label>
@@ -409,7 +409,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#accountsReceivableNumber">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#noteNumber"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Reference number assigned by accounts receivable department to the account of a specific debtor.</rdfs:comment>
         <rdfs:label xml:lang="en">accountsReceivableNumber</rdfs:label>
@@ -423,7 +423,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#additionalPartnerIdentificationEANCode">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/identifier"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Additional Partneridentification (GLN-Code)</rdfs:comment>
         <rdfs:label xml:lang="en">additionalPartnerIdentificationEANCode</rdfs:label>
@@ -450,7 +450,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#belongsToProcess">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/document#E-Invoice"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#E-Invoice"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Indicates to which business process the invoice belongs</rdfs:comment>
         <rdfs:label xml:lang="en">belongsToProcess</rdfs:label>
@@ -464,7 +464,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#beneficiaryReference">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/identifier"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Reference of the beneficiary</rdfs:comment>
         <rdfs:label xml:lang="en">beneficiaryReference</rdfs:label>
@@ -520,7 +520,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#companyOrPlaceRegistristrationNumber">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#noteNumber"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Company registration and place as legally required.</rdfs:comment>
         <rdfs:label xml:lang="en">companyOrPlaceRegistristrationNumber</rdfs:label>
@@ -534,7 +534,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#consumerUnitsInTradingUnitQuantity">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#quantity"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Numbers of consumer units in the traded unit</rdfs:comment>
         <rdfs:label xml:lang="en">consumerUnitsInTradingUnitQuantity</rdfs:label>
@@ -548,7 +548,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#consumerUnitsInTradingUnitQuantityWithUnit">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Numbers of consumer units in the traded unit</rdfs:comment>
         <rdfs:label xml:lang="en">consumerUnitsInTradingUnitQuantityWithUnit</rdfs:label>
@@ -562,7 +562,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#contactDepartmentPerson">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#contactPersom"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>The department or person within an organizational entity.</rdfs:comment>
         <rdfs:label xml:lang="en">contactDepartmentPerson</rdfs:label>
@@ -576,7 +576,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#contactPersom">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Contact Persons</rdfs:comment>
         <rdfs:label xml:lang="en">contactPerson</rdfs:label>
@@ -589,7 +589,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#contactPersonAccounting">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#contactPersom"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Department/person responsible for the accounts payable function within a corporation.</rdfs:comment>
         <rdfs:label xml:lang="en">contactPersonAccounting</rdfs:label>
@@ -604,7 +604,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#contactPersonCreditorAccounting">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#contactPersom"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Department/person responsible for the accounts payable function within a corporation</rdfs:comment>
         <rdfs:label xml:lang="en">contactPersonCreditorAccounting</rdfs:label>
@@ -619,7 +619,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#contactPersonEmailAddress">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#contactPersom"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Creating/sending/receiving of unstructured free text messages or documents using computer network, a mini- computer or an attached modem and regular telephone line or other electronic transmission media.</rdfs:comment>
         <rdfs:label xml:lang="en">contactPersonEmailAddress</rdfs:label>
@@ -634,7 +634,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#contactPersonFaxNumber">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#contactPersom"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Device used for transmitting and reproducing fixed graphic material (as printing) by means of signals over telephone lines or other electronic transmission media.</rdfs:comment>
         <rdfs:label xml:lang="en">contactPersonFaxNumber</rdfs:label>
@@ -649,7 +649,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#contactPersonIncomingGoods">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#contactPersom"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Department/person responsible for receiving the goods at the place of delivery.</rdfs:comment>
         <rdfs:label xml:lang="en">contactPersonIncomingGoods</rdfs:label>
@@ -664,7 +664,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#contactPersonInformation">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#contactPersom"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Department/person to contact for questions regarding transactions</rdfs:comment>
         <rdfs:label xml:lang="en">contactPersonInformation</rdfs:label>
@@ -679,7 +679,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#contactPersonPurchasingDepartment">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#contactPersom"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Department/person responsible for issuing this purchase order.</rdfs:comment>
         <rdfs:label xml:lang="en">contactPersonPurchasingDepartment</rdfs:label>
@@ -694,7 +694,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#contactPersonReceivableAccounting">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#contactPersom"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Department/person responsible for the accounts receivable within a corporation</rdfs:comment>
         <rdfs:label xml:lang="en">contactPersonReceivableAccounting</rdfs:label>
@@ -709,7 +709,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#contactPersonSalesDepartment">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#contactPersom"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>The sales representative or department contact within an organization.</rdfs:comment>
         <rdfs:label xml:lang="en">contactPersonSalesDepartment</rdfs:label>
@@ -724,7 +724,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#contactPersonTelefonNumber">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#contactPersom"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Voice/data transmission by telephone</rdfs:comment>
         <rdfs:label xml:lang="en">contactPersonTelefonNumber</rdfs:label>
@@ -739,7 +739,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#contactPersonTelexNumber">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#contactPersom"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Transmission of text/data via telex.</rdfs:comment>
         <rdfs:label xml:lang="en">contactPersonTelexNumber</rdfs:label>
@@ -754,7 +754,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#contactPersonX400Number">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#contactPersom"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>CCITT Message handling system</rdfs:comment>
         <rdfs:label xml:lang="en">contactPersonX400Number</rdfs:label>
@@ -769,7 +769,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#contractNumber">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#noteNumber"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Reference number of a contract concluded between parties.</rdfs:comment>
         <rdfs:label xml:lang="en">contractNumber</rdfs:label>
@@ -783,7 +783,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#contractNumberBuyer">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#noteNumber"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Reference number assigned by buyer to a contract.</rdfs:comment>
         <rdfs:label xml:lang="en">contractNumberBuyer</rdfs:label>
@@ -1441,7 +1441,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#deliveredQuantity">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#quantity"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Number of pieces actually received at the final destination.</rdfs:comment>
         <rdfs:label xml:lang="en">deliveredQuantity</rdfs:label>
@@ -1511,7 +1511,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#despatchQuantity">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#quantity"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Quantity despatched by the seller.</rdfs:comment>
         <rdfs:label xml:lang="en">despatchQuantity</rdfs:label>
@@ -1539,7 +1539,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#discreteQuantity">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#quantity"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>The discrete quantity</rdfs:comment>
         <rdfs:label xml:lang="en">discreteQuantity</rdfs:label>
@@ -1637,7 +1637,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#fiscalNumber">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#noteNumber"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Tax payer&apos;s number. Number assigned to individual persons as well as to corporates by a public institution; this number is different from the VAT registration number.</rdfs:comment>
         <rdfs:label xml:lang="en">fiscalNumber</rdfs:label>
@@ -1651,7 +1651,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#governmentReferenceNumber">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/identifier"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Refernce number given by the goverment</rdfs:comment>
         <rdfs:label xml:lang="en">governmentReferenceNumber</rdfs:label>
@@ -1665,7 +1665,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#harmonisedSystem">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#noteNumber"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Contains the number of the harmonised system</rdfs:comment>
         <rdfs:label xml:lang="en">harmonisedSystem</rdfs:label>
@@ -1693,7 +1693,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#hasAdditionalProductIdentification">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Information which specifies and qualifies product identifications.</rdfs:comment>
         <rdfs:label xml:lang="en">hasAdditionalProductIdentification</rdfs:label>
@@ -1889,7 +1889,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#hasCity">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Cotains the city name of a party involved in the invoice</rdfs:comment>
         <rdfs:label xml:lang="en">hasCity</rdfs:label>
@@ -1945,7 +1945,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#hasDiscreteQuantityWithUnit">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>The discrete quantity with unit</rdfs:comment>
         <rdfs:label xml:lang="en">hasDiscreteQuantityWithUnit</rdfs:label>
@@ -2042,7 +2042,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#hasFunctionInInvoice">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Describes the role of a party involved in the invoice</rdfs:comment>
         <rdfs:label xml:lang="en">hasFunctionInInvoice</rdfs:label>
@@ -2084,7 +2084,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#hasGrosspriceOfItem">
         <rdfs:subPropertyOf rdf:resource="http://schema.org/amount"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <rdfs:comment>The price stated is the gross price per item to which allowances/ charges must be applied.</rdfs:comment>
         <rdfs:label>hasGrosspriceOfItem</rdfs:label>
@@ -2098,7 +2098,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#hasGrosspricePerUnit">
         <rdfs:subPropertyOf rdf:resource="http://schema.org/amount"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <rdfs:comment>The price stated is the gross price per unit to which allowances/ charges must be applied.</rdfs:comment>
         <rdfs:label>hasGrosspricePerUnit</rdfs:label>
@@ -2112,7 +2112,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#hasHeightDimension">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <rdfs:comment>Numeric value of height</rdfs:comment>
         <rdfs:label xml:lang="en">hasHeightDimension</rdfs:label>
@@ -2168,7 +2168,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#hasInvoiceprice">
         <rdfs:subPropertyOf rdf:resource="http://schema.org/amount"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <rdfs:comment>Referenced price taken from an invoice</rdfs:comment>
         <rdfs:label>hasInvoiceprice</rdfs:label>
@@ -2182,7 +2182,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#hasLengthMeasurements">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Length of pieces or packages stated for transport purposes</rdfs:comment>
         <rdfs:label xml:lang="en">hasLengthMeasurements</rdfs:label>
@@ -2196,7 +2196,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#hasLineItemAmount">
         <rdfs:subPropertyOf rdf:resource="http://schema.org/amount"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <rdfs:comment>Goods item total minus allowances plus charges for line item.</rdfs:comment>
         <rdfs:label>hasLineItemAmount</rdfs:label>
@@ -2210,7 +2210,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#hasNetPriceOfItem">
         <rdfs:subPropertyOf rdf:resource="http://schema.org/amount"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <rdfs:comment>The price stated is the net price per item including allowances/ charges. Allowances/charges may be stated for information only.</rdfs:comment>
         <rdfs:label>hasNetPriceOfItem</rdfs:label>
@@ -2224,7 +2224,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#hasNetWeight">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Weight (mass) of the goods themselves without any packing</rdfs:comment>
         <rdfs:label xml:lang="en">hasNetWeight</rdfs:label>
@@ -2238,7 +2238,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#hasNetWeightPerUnit">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Weight (mass) of goods including any packing normally going with them to a buyer in a retail sale</rdfs:comment>
         <rdfs:label xml:lang="en">hasNetWeightPerUnit</rdfs:label>
@@ -2252,7 +2252,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#hasNetpricePerUnit">
         <rdfs:subPropertyOf rdf:resource="http://schema.org/amount"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <rdfs:comment>The price stated is the net price per unit including allowances/ charges. Allowances/charges may be stated for information only.</rdfs:comment>
         <rdfs:label>hasNetpricePerUnit</rdfs:label>
@@ -2322,7 +2322,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#hasPhysicalDimension">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Specified measurement dimensions refer to physical dimensions of a product, material or package</rdfs:comment>
         <rdfs:label xml:lang="en">hasPhysicalDimension</rdfs:label>
@@ -2350,7 +2350,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#hasPriceSource">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Identification of the type of price of an item</rdfs:comment>
         <rdfs:label xml:lang="en">hasPriceSource</rdfs:label>
@@ -2364,7 +2364,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#hasPriceType">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Identification pricing specification</rdfs:comment>
         <rdfs:label xml:lang="en">hasPriceType</rdfs:label>
@@ -2378,7 +2378,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#hasPriceUnit">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#hasUnit"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Contains measure unit qualifier of a price</rdfs:comment>
         <rdfs:label xml:lang="en">hasPriceUnit</rdfs:label>
@@ -2392,7 +2392,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#hasProductIdentification">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Identification of the product</rdfs:comment>
         <rdfs:label xml:lang="en">hasProductIdentification</rdfs:label>
@@ -2406,7 +2406,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#hasQuantityUnit">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#hasUnit"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Contains measure unit qualifier of a quantity</rdfs:comment>
         <rdfs:label xml:lang="en">hasQuantityUnit</rdfs:label>
@@ -2448,7 +2448,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#hasStockRestriction">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>A measurement indicating limitation in relation to storage.</rdfs:comment>
         <rdfs:label xml:lang="en">hasStockRestriction</rdfs:label>
@@ -2629,7 +2629,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#hasTransportRestriction">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>A measurement indicating limitations in relation to transportation equipment.</rdfs:comment>
         <rdfs:label xml:lang="en">hasTransportRestriction</rdfs:label>
@@ -2643,7 +2643,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#hasUnit">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Contains measure unit qualifier</rdfs:comment>
         <rdfs:label xml:lang="en">hasUnit</rdfs:label>
@@ -2657,7 +2657,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#hasUnitPrice">
         <rdfs:subPropertyOf rdf:resource="http://schema.org/amount"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <rdfs:comment>Reporting monetary amount is a &apos;per unit&apos; amount</rdfs:comment>
         <rdfs:label>hasUnitPrice</rdfs:label>
@@ -2671,7 +2671,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#hasVATIdentifierBuyer">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/p2p-o/organization#VATIdentifier"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Unique number assigned by the relevant tax authority to identify the buyer for use in relation to Value Added Tax (VAT).</rdfs:comment>
         <rdfs:label xml:lang="en">hasVATIdentifierBuyer</rdfs:label>
@@ -2685,7 +2685,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#hasVATIdentifierDeliveryParty">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/p2p-o/organization#VATIdentifier"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Unique number assigned by the relevant tax authority to identify the delivery party for use in relation to Value Added Tax (VAT).</rdfs:comment>
         <rdfs:label xml:lang="en">hasVATIdentifierDeliveryParty</rdfs:label>
@@ -2699,7 +2699,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#hasVATIdentifierInvoicee">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/p2p-o/organization#VATIdentifier"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Unique number assigned by the relevant tax authority to identify the invoicee for use in relation to Value Added Tax (VAT).</rdfs:comment>
         <rdfs:label xml:lang="en">hasVATIdentifierInvoicee</rdfs:label>
@@ -2713,7 +2713,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#hasVATIdentifierPayer">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/p2p-o/organization#VATIdentifier"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Unique number assigned by the relevant tax authority to identify the payer for use in relation to Value Added Tax (VAT).</rdfs:comment>
         <rdfs:label xml:lang="en">hasVATIdentifierPayer</rdfs:label>
@@ -2727,7 +2727,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#hasVATIdentifierSupplier">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/p2p-o/organization#VATIdentifier"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Unique number assigned by the relevant tax authority to identify the supplier for use in relation to Value Added Tax (VAT).</rdfs:comment>
         <rdfs:label xml:lang="en">hasVATIdentifierSupplier</rdfs:label>
@@ -2783,7 +2783,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#importLicenseNumber">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#noteNumber"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Reference number assigned by the issuing authority to an Import Licence.</rdfs:comment>
         <rdfs:label xml:lang="en">importLicenseNumber</rdfs:label>
@@ -2797,7 +2797,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#informationCustomsDeclaration">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Note contains customs declaration information.</rdfs:comment>
         <rdfs:label xml:lang="en">informationCustomsDeclaration</rdfs:label>
@@ -2825,7 +2825,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#internalCustomerNumber">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#noteNumber"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Number assigned by a seller, supplier etc. to identify a customer within his enterprise.</rdfs:comment>
         <rdfs:label xml:lang="en">internalCustomerNumber</rdfs:label>
@@ -2853,7 +2853,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#internationalArticleNumber">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#noteNumber"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Number assigned to a manufacturer&apos;s product according to the International Article Numbering Association.</rdfs:comment>
         <rdfs:label xml:lang="en">internationalArticleNumber</rdfs:label>
@@ -2881,7 +2881,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#itemNumberBuyer">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#noteNumber"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Item number assigned by the buyer to identify an article.</rdfs:comment>
         <rdfs:label xml:lang="en">itemNumberBuyer</rdfs:label>
@@ -2895,7 +2895,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#itemNumberManufacturer">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#noteNumber"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>The number given to an article by its manufacturer.</rdfs:comment>
         <rdfs:label xml:lang="en">itemNumberManufacturer</rdfs:label>
@@ -2909,7 +2909,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#itemNumberSupplier">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#noteNumber"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Number assigned to an article by the supplier of that article.</rdfs:comment>
         <rdfs:label xml:lang="en">itemNumberSupplier</rdfs:label>
@@ -2923,7 +2923,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#lineItemReferenceNumber">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#noteNumber"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Reference number identifying a particular line in a document.</rdfs:comment>
         <rdfs:label xml:lang="en">lineItemReferenceNumber</rdfs:label>
@@ -2996,7 +2996,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#nationalProductGroupCode">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#noteNumber"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>National product group code. Administered by a national agency.</rdfs:comment>
         <rdfs:label xml:lang="en">nationalProductGroupCode</rdfs:label>
@@ -3106,7 +3106,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#orderNumber">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#noteNumber"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Reference number of an order.</rdfs:comment>
         <rdfs:label xml:lang="en">orderNumber</rdfs:label>
@@ -3119,7 +3119,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#orderNumberBuyer">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#orderNumber"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Reference number assigned by the buyer to an order.</rdfs:comment>
         <rdfs:label xml:lang="en">orderNumberBuyer</rdfs:label>
@@ -3147,7 +3147,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#orderNumberSupplier">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#orderNumber"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Reference number assigned by supplier to a buyer&apos;s purchase order.</rdfs:comment>
         <rdfs:label xml:lang="en">orderNumberSupplier</rdfs:label>
@@ -3258,7 +3258,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#positionLineNumber">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#noteNumber"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Number of the Position of the Line in the whole message</rdfs:comment>
         <rdfs:label xml:lang="en">positionLineNumber</rdfs:label>
@@ -3286,7 +3286,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#priceCondition">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Condition of the Price</rdfs:comment>
         <rdfs:label xml:lang="en">priceCondition</rdfs:label>
@@ -3342,7 +3342,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#promotionalVariantNumber">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#noteNumber"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Number of the promotional variant number</rdfs:comment>
         <rdfs:label xml:lang="en">promotionalVariantNumber</rdfs:label>
@@ -3370,7 +3370,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#quantity">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>display a quantity</rdfs:comment>
         <rdfs:label xml:lang="en">quantity</rdfs:label>
@@ -3425,7 +3425,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#recivedAndAcceptedQuantity">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#quantity"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Quantity which has been received and accepted at a given location.</rdfs:comment>
         <rdfs:label xml:lang="en">recivedAndAcceptedQuantity</rdfs:label>
@@ -3439,7 +3439,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#recivedAndAcceptedQuantityWithUnit">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#quantity"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Quantity which has been received and accepted at a given location with the unit</rdfs:comment>
         <rdfs:label xml:lang="en">recivedAndAcceptedQuantityWithUnit</rdfs:label>
@@ -3467,7 +3467,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#referenceNumberBusinessContactExtractEANCode">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#noteNumber"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Reference number for a business account statement as EAN code</rdfs:comment>
         <rdfs:label xml:lang="en">referenceNumberBusinessContactExtractEANCode</rdfs:label>
@@ -3481,7 +3481,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#referenceNumberCustomer">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#noteNumber"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Reference number assigned by the customer to a transaction.</rdfs:comment>
         <rdfs:label xml:lang="en">referenceNumberCustomer</rdfs:label>
@@ -3538,7 +3538,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#returnQuantity">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#quantity"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>The return quantity</rdfs:comment>
         <rdfs:label xml:lang="en">returnQuantity</rdfs:label>
@@ -3552,7 +3552,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#returnQuantityWithUnit">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#quantity"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>The return quantity with unit</rdfs:comment>
         <rdfs:label xml:lang="en">returnQuantityWithUnit</rdfs:label>
@@ -3566,7 +3566,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#sellersReferenceNumber">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/identifier"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Reference number assigned to a transaction by the seller</rdfs:comment>
         <rdfs:label xml:lang="en">sellersReferenceNumber</rdfs:label>
@@ -3690,7 +3690,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#unitPriceBasis">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>The Unit price basis</rdfs:comment>
         <rdfs:label xml:lang="en">unitPriceBasis</rdfs:label>
@@ -3704,7 +3704,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#universalProductCode">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#noteNumber"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Number assigned to a manufacturer&apos;s product by the Product Code Council.</rdfs:comment>
         <rdfs:label xml:lang="en">universalProductCode</rdfs:label>
@@ -3747,7 +3747,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#widthDimension">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Numeric value of width</rdfs:comment>
         <rdfs:label xml:lang="en">widthDimension</rdfs:label>
@@ -3761,7 +3761,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#withoutCalculationQuantity">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#quantity"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Quantity of goods which are free of charge.</rdfs:comment>
         <rdfs:label xml:lang="en">withoutCalculationQuantity</rdfs:label>
@@ -3775,7 +3775,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#withoutCalculationQuantityWithUnit">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#quantity"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Quantity of goods which are free of charge with unit</rdfs:comment>
         <rdfs:label xml:lang="en">withoutCalculationQuantityWithUnit</rdfs:label>
@@ -3789,7 +3789,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/p2p-o/documentline#invoicedQuantity">
         <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#quantity"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>The quantity as per invoice.</rdfs:comment>
         <rdfs:label xml:lang="en">invoicedQuantity</rdfs:label>
@@ -3803,7 +3803,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/p2p-o/documentline#invoicedQuantityUnitOfMeasure">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>The quantity as per invoice.</rdfs:comment>
         <rdfs:label xml:lang="en">invoicedQuantityUnitOfMeasure</rdfs:label>
@@ -3858,7 +3858,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/p2p-o/item#itemName">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Description of the item</rdfs:comment>
         <rdfs:label xml:lang="en">itemName</rdfs:label>
@@ -3872,7 +3872,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/p2p-o/organization#VATIdentifier">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/identifier"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Unique number assigned by the relevant tax authority to identify a party for use in relation to Value Added Tax (VAT).</rdfs:comment>
         <rdfs:label xml:lang="en">VATIdentifier</rdfs:label>
@@ -3886,7 +3886,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/p2p-o/organization#countrySubdivision">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>The subdivion of the country the organization is allocated in</rdfs:comment>
         <rdfs:label xml:lang="en">countrySubdivision</rdfs:label>
@@ -3900,7 +3900,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/p2p-o/organization#formalName">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Name of a party involved in the invoice</rdfs:comment>
         <rdfs:label xml:lang="en">formalName</rdfs:label>
@@ -3915,7 +3915,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/p2p-o/organization#globalLocationNumber">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">The Global Location Number of a party involved in the invoice</rdfs:comment>
         <rdfs:label xml:lang="en">globalLocationNumber</rdfs:label>
@@ -3936,10 +3936,11 @@
     
 
 
-    <!-- http://www.w3.org/ns/org#FormalOrganization -->
+    <!-- https://purl.org/edifact/ontology#FormalOrganization -->
 
 
-    <owl:Class rdf:about="http://www.w3.org/ns/org#FormalOrganization">
+    <owl:Class rdf:about="https://purl.org/edifact/ontology#FormalOrganization">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
         <rdfs:comment>The class containing information about the perfomed role of the involved organizations</rdfs:comment>
         <rdfs:label>FormalOrganization</rdfs:label>
     </owl:Class>
@@ -4054,7 +4055,7 @@
 
     <owl:Class rdf:about="https://purl.org/edifact/ontology#InvoiceDetails">
         <rdfs:subClassOf rdf:resource="https://purl.org/edifact/ontology#InvoiceContent"/>
-        <owl:disjointWith rdf:resource="https://purl.org/p2p-o/item#Item"/>
+        <owl:disjointWith rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <rdfs:comment>Contains all the general information about an invoice</rdfs:comment>
         <rdfs:label xml:lang="en">InvoiceDetails</rdfs:label>
     </owl:Class>
@@ -4215,18 +4216,21 @@
     
 
 
-    <!-- https://purl.org/p2p-o/document#E-Invoice -->
+    <!-- https://purl.org/edifact/ontology#E-Invoice -->
 
 
-    <owl:Class rdf:about="https://purl.org/p2p-o/document#E-Invoice"/>
+    <owl:Class rdf:about="https://purl.org/edifact/ontology#E-Invoice">
+        <rdfs:subClassOf rdf:resource="https://purl.org/p2p-o/document#E-Invoice"/>
+        <rdfs:label xml:lang="en">E-Invoice</rdfs:label>
+    </owl:Class>
     
 
 
-    <!-- https://purl.org/p2p-o/item#Item -->
+    <!-- https://purl.org/edifact/ontology#Item -->
 
 
-    <owl:Class rdf:about="https://purl.org/p2p-o/item#Item">
-        <rdfs:subClassOf rdf:resource="https://purl.org/edifact/ontology#InvoiceContent"/>
+    <owl:Class rdf:about="https://purl.org/edifact/ontology#Item">
+        <rdfs:subClassOf rdf:resource="https://purl.org/p2p-o/item#Item"/>
         <rdfs:comment>Contains all the information about a item</rdfs:comment>
         <rdfs:label xml:lang="en">Item</rdfs:label>
     </owl:Class>
@@ -4250,7 +4254,7 @@
         <rdfs:comment xml:lang="en">Defined as the union of the classes Item and InvoiceDetails</rdfs:comment>
         <rdfs:label xml:lang="en">InvoiceContent</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="https://purl.org/p2p-o/document#E-Invoice">
+    <rdf:Description rdf:about="https://purl.org/edifact/ontology#E-Invoice">
         <rdfs:comment>The root class of each invoice. Contains all the linked classes with information about the invoice</rdfs:comment>
         <rdfs:label xml:lang="en">E-Invoice</rdfs:label>
     </rdf:Description>
