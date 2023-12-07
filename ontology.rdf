@@ -8,13 +8,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:document="https://purl.org/p2p-o/document#"
      xmlns:ontology="https://purl.org/edifact/ontology#">
-    <owl:Ontology rdf:about="https://purl.org/edifact/ontology"
-		dcterms:created="2007/05/31"
-		dcterms:modified="$Date: 2009-05-11 17:50:14 +0100 (Mon, 11 May 2009) $"
-		dcterms:title="Semantic Web Conference Ontology"
-		rdfs:label="Semantic Web Conference Ontology">
-    
-	</owl:Ontology>
+    <owl:Ontology rdf:about="https://purl.org/edifact/ontology"/>
 
 
     <!-- 
