@@ -9,4 +9,5 @@ Their connection is illustated the following way:
 ![alt text](http://url/to/img.png)
 
 The devleopment of the Ontolgy was performed with the help of some competency questions. 
+
 A jupyter note with all competency questions and queries over a real-world invoice can be found [here](https://github.com/johannesmaekelburg/edifact-ontology/tree/main/test)
