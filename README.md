@@ -6,7 +6,7 @@ In total the EDIFACT-Onotlogy comprises 28 classes, 10 OWL object properties, 23
 
 The main structure of the Ontology contains 7 classes. 
 Their connection is illustated the following way: 
-![alt text]([http://url/to/img.png](https://github.com/johannesmaekelburg/edifact-ontology/blob/07cfd460f537d23153ccfcf57c01c664ab449ae6/Main%20Concept%20EDIFACT%20Ontology.png))
+![alt text](https://github.com/johannesmaekelburg/edifact-ontology/blob/07cfd460f537d23153ccfcf57c01c664ab449ae6/Main%20Concept%20EDIFACT%20Ontology.png)
 
 The devleopment of the Ontolgy was performed with the help of some competency questions. 
 
