@@ -1,7 +1,7 @@
-# Jupyter Notebook Competency Questions
+#Competency Questions Jupyter Notebook
 
 
-This is a jupyter-notebook to validate the competency questions of the EDIFACt ontology
+This jupyter-notebook to validate the competency questions of the EDIFACt ontology
 
 Competency questions:
 
