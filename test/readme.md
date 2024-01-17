@@ -1,4 +1,5 @@
-**#Jupyter Notebook Competency Questions**
+# Jupyter Notebook Competency Questions
+
 
 This is a jupyter-notebook to validate the competency questions of the EDIFACt ontology
 
