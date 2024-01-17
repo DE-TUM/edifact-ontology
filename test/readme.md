@@ -1,4 +1,6 @@
+#Jupyter Notebook Competency Questions
 This is a jupyter-notebook to validate the competency questions of the EDIFACt ontology
+
 Competency questions:
 
 CQ 0: What invoices are all listed in an EDIFACT message? 
