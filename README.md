@@ -1,1 +1,1 @@
-# edifact-ontology
+# EDIFACT-Ontology
