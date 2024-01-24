@@ -4706,6 +4706,10 @@
 
     <owl:Class rdf:about="https://purl.org/edifact/ontology#E-Invoice">
         <rdfs:subClassOf rdf:resource="https://purl.org/p2p-o/document#E-Invoice"/>
+        <ns1:term_status>stable</ns1:term_status>
+        <rdfs:comment>The root class of each invoice. Contains all the linked classes with information about the invoice</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://purl.org/edifact/ontology#"/>
+        <rdfs:label xml:lang="en">E Invoice</rdfs:label>
     </owl:Class>
     
 
@@ -4739,7 +4743,7 @@
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
         <ns1:term_status>stable</ns1:term_status>
         <rdfs:comment>The class containing information about the perfomed role of the involved organizations</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org#"/>
+        <rdfs:isDefinedBy rdf:resource="https://purl.org/edifact/ontology#"/>
         <rdfs:label>FormalOrganization</rdfs:label>
     </owl:Class>
     
@@ -5005,7 +5009,7 @@
         <ns1:term_status>stable</ns1:term_status>
         <rdfs:comment>The root class of each invoice. Contains all the linked classes with information about the invoice</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://purl.org/edifact/ontology#"/>
-        <rdfs:label xml:lang="en">Electronic Invoice</rdfs:label>
+        <rdfs:label xml:lang="en">E Invoice</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="https://purl.org/edifact/ontology#EDIFACT-Structure">
         <ns1:term_status>stable</ns1:term_status>
