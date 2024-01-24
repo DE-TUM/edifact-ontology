@@ -4973,7 +4973,12 @@
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#Organization"/>
     </owl:Class>
         
-
+    <owl:Class rdf:about="http://www.w3.org/ns/org#Organization">
+        <rdfs:comment xml:lang="en">Represents a collection of people organized together into a community or other social, commercial or political structure. The group has some common purpose or reason for existence which goes beyond the set of people belonging to it and can act as an Agent. Organizations are often decomposable into hierarchical structures.  It is recommended that SKOS lexical labels should be used to label the Organization. In particular `skos:prefLabel` for the primary (possibly legally recognized name), `skos:altLabel` for alternative names (trading names, colloquial names) and `skos:notation` to denote a code from a code list. Alternative names: _Collective_ _Body_ _Org_ _Group_</rdfs:comment>
+        <rdfs:isDefinedBy>http://www.w3.org/ns/org#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Organization</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    </owl:Class>
 
     <!-- https://purl.org/p2p-o/document#E-Invoice -->
 
@@ -4997,6 +5002,15 @@
         <rdfs:label xml:lang="en">item</rdfs:label>
         <seeEN16931-1-2017>BG-31</seeEN16931-1-2017>
     </owl:Class>
+
+    <rdfs:Class rdf:about="http://xmlns.com/foaf/0.1/Document" rdfs:label="Document" rdfs:comment="A document." ns1:term_status="stable">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:resource="http://schema.org/CreativeWork" />
+<!--    <rdfs:subClassOf rdf:resource="http://xmlns.com/wordnet/1.6/Document"/> -->
+    <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+  </rdfs:Class>
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
