@@ -4973,6 +4973,7 @@
     <!-- https://purl.org/p2p-o/document#E-Invoice -->
 
     <owl:Class rdf:about="https://purl.org/p2p-o/document#E-Invoice">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
         <rdfs:comment xml:lang="en">&quot;‘electronic invoice’ means an invoice that has been issued, transmitted and received in a structured electronic format which allows for its automatic and electronic processing;&quot;  (Directive 2014/55/EU)</rdfs:comment>
         <rdfs:isDefinedBy>https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32014L0055</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">e-invoice</rdfs:label>
@@ -4991,6 +4992,13 @@
         <rdfs:label xml:lang="en">item</rdfs:label>
         <seeEN16931-1-2017>BG-31</seeEN16931-1-2017>
     </owl:Class>
+
+
+    <rdfs:Class rdf:about="http://xmlns.com/foaf/0.1/Document" rdfs:label="Document" rdfs:comment="A document." ns1:term_status="stable">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <owl:equivalentClass rdf:resource="http://schema.org/CreativeWork" />
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdfs:Class>
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
