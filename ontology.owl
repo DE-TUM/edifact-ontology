@@ -4963,6 +4963,7 @@
 
     <owl:Class rdf:about="http://www.w3.org/ns/org#FormalOrganization">
         <ns1:term_status>stable</ns1:term_status>
+        <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Organization" />
         <rdfs:comment>An Organization which is recognized in the world at large, in particular in legal jurisdictions, with associated rights and responsibilities. Examples include a Corporation, Charity, Government or Church. Note that this is a super class of `gr:BusinessEntity` and it is recommended to use the GoodRelations vocabulary to denote Business classifications such as DUNS or NAICS."""@en</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
         <rdfs:label>FormalOrganization</rdfs:label>
@@ -4996,7 +4997,7 @@
 
     <rdfs:Class rdf:about="http://xmlns.com/foaf/0.1/Document" rdfs:label="Document" rdfs:comment="A document." ns1:term_status="stable">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <owl:equivalentClass rdf:resource="http://schema.org/CreativeWork" />
+        <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
         <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
     </rdfs:Class>
 
