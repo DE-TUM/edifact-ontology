@@ -4804,7 +4804,7 @@
         <ns1:term_status>stable</ns1:term_status>
         <rdfs:comment>Contains all the information about a item</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://purl.org/edifact/ontology#"/>
-        <rdfs:label xml:lang="en">An Item</rdfs:label>
+        <rdfs:label xml:lang="en">Item</rdfs:label>
     </owl:Class>
     
 
@@ -4970,6 +4970,7 @@
         <rdfs:comment>An Organization which is recognized in the world at large, in particular in legal jurisdictions, with associated rights and responsibilities. Examples include a Corporation, Charity, Government or Church. Note that this is a super class of `gr:BusinessEntity` and it is recommended to use the GoodRelations vocabulary to denote Business classifications such as DUNS or NAICS."""@en</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
         <rdfs:label>FormalOrganization</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#Organization"/>
     </owl:Class>
         
 
@@ -4980,6 +4981,7 @@
         <rdfs:comment xml:lang="en">&quot;‘electronic invoice’ means an invoice that has been issued, transmitted and received in a structured electronic format which allows for its automatic and electronic processing;&quot;  (Directive 2014/55/EU)</rdfs:comment>
         <rdfs:isDefinedBy>https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32014L0055</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">e-invoice</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
     </owl:Class>
 
     <!-- https://purl.org/p2p-o/item#Item -->
@@ -5009,7 +5011,7 @@
         <ns1:term_status>stable</ns1:term_status>
         <rdfs:comment>The root class of each invoice. Contains all the linked classes with information about the invoice</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://purl.org/edifact/ontology#"/>
-        <rdfs:label xml:lang="en">E Invoice</rdfs:label>
+        <rdfs:label xml:lang="en">E-Invoice</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="https://purl.org/edifact/ontology#EDIFACT-Structure">
         <ns1:term_status>stable</ns1:term_status>
