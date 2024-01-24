@@ -4611,16 +4611,6 @@
      -->
 
 
-    
-
-
-    <!-- http://www.w3.org/ns/org#FormalOrganization -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/ns/org#FormalOrganization"/>
-    
-
-
     <!-- https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#AgentRole -->
 
 
@@ -4968,21 +4958,7 @@
         <rdfs:isDefinedBy rdf:resource="https://purl.org/edifact/ontology#"/>
         <rdfs:label xml:lang="en">WholesalerRole</rdfs:label>
     </owl:Class>
-    
 
-
-    <!-- https://purl.org/p2p-o/document#E-Invoice -->
-
-
-    <owl:Class rdf:about="https://purl.org/p2p-o/document#E-Invoice"/>
-    
-
-
-    <!-- https://purl.org/p2p-o/item#Item -->
-
-
-    <owl:Class rdf:about="https://purl.org/p2p-o/item#Item"/>
-    
 
 
     <!-- 
