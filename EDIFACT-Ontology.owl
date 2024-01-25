@@ -183,10 +183,10 @@
     
 
 
-    <!-- https://purl.org/edifact/ontology#E-Invoice -->
+    <!-- https://purl.org/edifact/ontology#EDIFACT-Invoice -->
 
 
-    <owl:AnnotationProperty rdf:about="https://purl.org/edifact/ontology#E-Invoice"/>
+    <owl:AnnotationProperty rdf:about="https://purl.org/edifact/ontology#EDIFACT-Invoice"/>
     
 
 
@@ -194,7 +194,7 @@
 
 
     <owl:AnnotationProperty rdf:about="https://purl.org/edifact/ontology#EDIFACT-Structure">
-        <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#E-Invoice"/>
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#EDIFACT-Invoice"/>
     </owl:AnnotationProperty>
     
 
@@ -203,7 +203,7 @@
 
 
     <owl:AnnotationProperty rdf:about="https://purl.org/edifact/ontology#InvoiceContent">
-        <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#E-Invoice"/>
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#EDIFACT-Invoice"/>
     </owl:AnnotationProperty>
     
 
@@ -280,7 +280,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <owl:inverseOf rdf:resource="https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#providesAgentRole"/>
         <rdfs:domain rdf:resource="https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#AgentRole"/>
-        <rdfs:range rdf:resource="https://purl.org/edifact/ontology#E-Invoice"/>
+        <rdfs:range rdf:resource="https://purl.org/edifact/ontology#EDIFACT-Invoice"/>
         <ns1:term_status>stable</ns1:term_status>
         <rdfs:comment xml:lang="en">shows by which E-Invoice an agent role is provided</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#"/>
@@ -309,7 +309,7 @@
 
     <owl:ObjectProperty rdf:about="https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#providesAgentRole">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#E-Invoice"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#EDIFACT-Invoice"/>
         <rdfs:range rdf:resource="https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#AgentRole"/>
         <ns1:term_status>stable</ns1:term_status>
         <rdfs:comment xml:lang="en">shows which agnezt roles are provided by an invoice</rdfs:comment>
@@ -325,7 +325,7 @@
     <owl:ObjectProperty rdf:about="https://purl.org/edifact/ontology#followsStandard">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <owl:inverseOf rdf:resource="https://purl.org/edifact/ontology#isStandardOf"/>
-        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#E-Invoice"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#EDIFACT-Invoice"/>
         <rdfs:range rdf:resource="https://purl.org/edifact/ontology#EDIFACT-Structure"/>
         <ns1:term_status>stable</ns1:term_status>
         <rdfs:comment>shows the file standard resources the invoice has</rdfs:comment>
@@ -341,7 +341,7 @@
     <owl:ObjectProperty rdf:about="https://purl.org/edifact/ontology#hasInvoiceDetails">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <owl:inverseOf rdf:resource="https://purl.org/edifact/ontology#isInvoiceDetailsOf"/>
-        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#E-Invoice"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#EDIFACT-Invoice"/>
         <rdfs:range rdf:resource="https://purl.org/edifact/ontology#InvoiceDetails"/>
         <ns1:term_status>stable</ns1:term_status>
         <rdfs:comment xml:lang="en">Contains the Invoice Details of an Invoice</rdfs:comment>
@@ -357,7 +357,7 @@
     <owl:ObjectProperty rdf:about="https://purl.org/edifact/ontology#hasItem">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <owl:inverseOf rdf:resource="https://purl.org/edifact/ontology#isItemOf"/>
-        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#E-Invoice"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#EDIFACT-Invoice"/>
         <rdfs:range rdf:resource="https://purl.org/edifact/ontology#Item"/>
         <ns1:term_status>stable</ns1:term_status>
         <rdfs:comment xml:lang="en">shows which items are included in an invoice</rdfs:comment>
@@ -373,7 +373,7 @@
     <owl:ObjectProperty rdf:about="https://purl.org/edifact/ontology#isInvoiceDetailsOf">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#InvoiceDetails"/>
-        <rdfs:range rdf:resource="https://purl.org/edifact/ontology#E-Invoice"/>
+        <rdfs:range rdf:resource="https://purl.org/edifact/ontology#EDIFACT-Invoice"/>
         <ns1:term_status>stable</ns1:term_status>
         <rdfs:comment xml:lang="en">shows to which Invoice the Invoice Details belong</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://purl.org/edifact/ontology#"/>
@@ -388,7 +388,7 @@
     <owl:ObjectProperty rdf:about="https://purl.org/edifact/ontology#isItemOf">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#Item"/>
-        <rdfs:range rdf:resource="https://purl.org/edifact/ontology#E-Invoice"/>
+        <rdfs:range rdf:resource="https://purl.org/edifact/ontology#EDIFACT-Invoice"/>
         <ns1:term_status>stable</ns1:term_status>
         <rdfs:comment xml:lang="en">shows to which Invoice the item belongs</rdfs:comment>
         <rdfs:comment xml:lang="de">zeigt an zu welcher Rechnung der Artikel gehört</rdfs:comment>
@@ -404,7 +404,7 @@
     <owl:ObjectProperty rdf:about="https://purl.org/edifact/ontology#isStandardOf">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#EDIFACT-Structure"/>
-        <rdfs:range rdf:resource="https://purl.org/edifact/ontology#E-Invoice"/>
+        <rdfs:range rdf:resource="https://purl.org/edifact/ontology#EDIFACT-Invoice"/>
         <ns1:term_status>stable</ns1:term_status>
         <rdfs:comment xml:lang="en">shows of which invoice the EDIFACT Structure is</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://purl.org/edifact/ontology#"/>
@@ -478,7 +478,7 @@
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/date">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#E-Invoice"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#EDIFACT-Invoice"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <ns1:term_status>stable</ns1:term_status>
         <rdfs:comment>contains a date</rdfs:comment>
@@ -493,7 +493,7 @@
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/identifier">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#E-Invoice"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#EDIFACT-Invoice"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <ns1:term_status>stable</ns1:term_status>
         <rdfs:comment>identifier of a part in the invoice</rdfs:comment>
@@ -632,7 +632,7 @@
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#belongsToProcess">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#E-Invoice"/>
+        <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#EDIFACT-Invoice"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <ns1:term_status>stable</ns1:term_status>
         <rdfs:comment>Indicates to which business process the invoice belongs</rdfs:comment>
@@ -4610,6 +4610,30 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <!-- http://www.w3.org/ns/org#FormalOrganization -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/org#FormalOrganization">
+        <ns1:term_status>stable</ns1:term_status>
+        <rdfs:comment>An Organization which is recognized in the world at large, in particular in legal jurisdictions, with associated rights and responsibilities. Examples include a Corporation, Charity, Government or Church. Note that this is a super class of `gr:BusinessEntity` and it is recommended to use the GoodRelations vocabulary to denote Business classifications such as DUNS or NAICS."""@en</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+        <rdfs:label>FormalOrganization</rdfs:label>
+    </owl:Class>
+        
+    <!-- https://purl.org/p2p-o/document#E-Invoice -->
+
+    <owl:Class rdf:about="https://purl.org/p2p-o/document#E-Invoice">
+        <rdfs:comment xml:lang="en">&quot;‘electronic invoice’ means an invoice that has been issued, transmitted and received in a structured electronic format which allows for its automatic and electronic processing;&quot;  (Directive 2014/55/EU)</rdfs:comment>
+        <rdfs:isDefinedBy>https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32014L0055</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">e-invoice</rdfs:label>
+    </owl:Class>
+
+    <!-- https://purl.org/p2p-o/item#Item -->
+
+    <owl:Class rdf:about="https://purl.org/p2p-o/item#Item">
+        <rdfs:comment xml:lang="en">invoiced goods and services</rdfs:comment>
+        <rdfs:label xml:lang="en">item</rdfs:label>
+    </owl:Class>
+
 
     <!-- https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#AgentRole -->
 
@@ -4701,11 +4725,15 @@
     
 
 
-    <!-- https://purl.org/edifact/ontology#E-Invoice -->
+    <!-- https://purl.org/edifact/ontology#EDIFACT-Invoice -->
 
 
-    <owl:Class rdf:about="https://purl.org/edifact/ontology#E-Invoice">
+    <owl:Class rdf:about="https://purl.org/edifact/ontology#EDIFACT-Invoice">
         <rdfs:subClassOf rdf:resource="https://purl.org/p2p-o/document#E-Invoice"/>
+        <ns1:term_status>stable</ns1:term_status>
+        <rdfs:comment>The root class of each invoice. Contains all the linked classes with information about the invoice</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://purl.org/edifact/ontology#"/>
+        <rdfs:label xml:lang="en">EDIFACT E-Invoice</rdfs:label>
     </owl:Class>
     
 
@@ -4739,7 +4767,7 @@
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
         <ns1:term_status>stable</ns1:term_status>
         <rdfs:comment>The class containing information about the perfomed role of the involved organizations</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org#"/>
+        <rdfs:isDefinedBy rdf:resource="https://purl.org/edifact/ontology#"/>
         <rdfs:label>FormalOrganization</rdfs:label>
     </owl:Class>
     
@@ -4801,7 +4829,7 @@
         <ns1:term_status>stable</ns1:term_status>
         <rdfs:comment>Contains all the information about a item</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://purl.org/edifact/ontology#"/>
-        <rdfs:label xml:lang="en">Item</rdfs:label>
+        <rdfs:label xml:lang="en">EDIFACT Item</rdfs:label>
     </owl:Class>
     
 
@@ -4961,6 +4989,7 @@
     </owl:Class>
 
 
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -4970,7 +4999,7 @@
      -->
 
 
-    <rdf:Description rdf:about="https://purl.org/edifact/ontology#E-Invoice">
+    <rdf:Description rdf:about="https://purl.org/edifact/ontology#EDIFACT-Invoice">
         <ns1:term_status>stable</ns1:term_status>
         <rdfs:comment>The root class of each invoice. Contains all the linked classes with information about the invoice</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://purl.org/edifact/ontology#"/>
