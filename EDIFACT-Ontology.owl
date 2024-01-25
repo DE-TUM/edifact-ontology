@@ -4733,7 +4733,7 @@
         <ns1:term_status>stable</ns1:term_status>
         <rdfs:comment>The root class of each invoice. Contains all the linked classes with information about the invoice</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://purl.org/edifact/ontology#"/>
-        <rdfs:label xml:lang="en">EDIFACT E-Invoice</rdfs:label>
+        <rdfs:label xml:lang="en">EDIFACT Invoice</rdfs:label>
     </owl:Class>
     
 
