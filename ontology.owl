@@ -4800,6 +4800,7 @@
 
 
     <owl:Class rdf:about="https://purl.org/edifact/ontology#Item">
+        <rdfs:subClassOf rdf:resource="https://purl.org/edifact/ontology#InvoiceContent"/>
         <rdfs:subClassOf rdf:resource="https://purl.org/p2p-o/item#Item"/>
         <ns1:term_status>stable</ns1:term_status>
         <rdfs:comment>Contains all the information about a item</rdfs:comment>
