@@ -517,7 +517,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://purl.org/edifact/ontology#contactDepartmentPerson
 :contactDepartmentPerson rdf:type owl:DatatypeProperty ;
-                         rdfs:subPropertyOf :contactPersom ;
+                         rdfs:subPropertyOf :contactPerson ;
                          rdfs:domain :FormalOrganization ;
                          rdfs:range xsd:string ;
                          <http://www.w3.og/2003/06/sw-vocab-status/ns#term_status> "stable" ;
@@ -527,8 +527,8 @@ xsd:date rdf:type rdfs:Datatype .
                          :seeXML "D_3412" .
 
 
-###  https://purl.org/edifact/ontology#contactPersom
-:contactPersom rdf:type owl:DatatypeProperty ;
+###  https://purl.org/edifact/ontology#contactPerson
+:contactPerson rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf owl:topDataProperty ;
                rdfs:domain :FormalOrganization ;
                rdfs:range xsd:string ;
@@ -540,7 +540,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://purl.org/edifact/ontology#contactPersonAccounting
 :contactPersonAccounting rdf:type owl:DatatypeProperty ;
-                         rdfs:subPropertyOf :contactPersom ;
+                         rdfs:subPropertyOf :contactPerson ;
                          rdfs:domain :FormalOrganization ;
                          rdfs:range xsd:string ;
                          <http://www.w3.og/2003/06/sw-vocab-status/ns#term_status> "stable" ;
@@ -553,7 +553,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://purl.org/edifact/ontology#contactPersonCreditorAccounting
 :contactPersonCreditorAccounting rdf:type owl:DatatypeProperty ;
-                                 rdfs:subPropertyOf :contactPersom ;
+                                 rdfs:subPropertyOf :contactPerson ;
                                  rdfs:domain :FormalOrganization ;
                                  rdfs:range xsd:string ;
                                  <http://www.w3.og/2003/06/sw-vocab-status/ns#term_status> "stable" ;
@@ -566,7 +566,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://purl.org/edifact/ontology#contactPersonEmailAddress
 :contactPersonEmailAddress rdf:type owl:DatatypeProperty ;
-                           rdfs:subPropertyOf :contactPersom ;
+                           rdfs:subPropertyOf :contactPerson ;
                            rdfs:domain :FormalOrganization ;
                            rdfs:range xsd:string ;
                            <http://www.w3.og/2003/06/sw-vocab-status/ns#term_status> "stable" ;
@@ -579,7 +579,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://purl.org/edifact/ontology#contactPersonFaxNumber
 :contactPersonFaxNumber rdf:type owl:DatatypeProperty ;
-                        rdfs:subPropertyOf :contactPersom ;
+                        rdfs:subPropertyOf :contactPerson ;
                         rdfs:domain :FormalOrganization ;
                         rdfs:range xsd:string ;
                         <http://www.w3.og/2003/06/sw-vocab-status/ns#term_status> "stable" ;
@@ -592,7 +592,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://purl.org/edifact/ontology#contactPersonIncomingGoods
 :contactPersonIncomingGoods rdf:type owl:DatatypeProperty ;
-                            rdfs:subPropertyOf :contactPersom ;
+                            rdfs:subPropertyOf :contactPerson ;
                             rdfs:domain :FormalOrganization ;
                             rdfs:range xsd:string ;
                             <http://www.w3.og/2003/06/sw-vocab-status/ns#term_status> "stable" ;
@@ -605,7 +605,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://purl.org/edifact/ontology#contactPersonInformation
 :contactPersonInformation rdf:type owl:DatatypeProperty ;
-                          rdfs:subPropertyOf :contactPersom ;
+                          rdfs:subPropertyOf :contactPerson ;
                           rdfs:domain :FormalOrganization ;
                           rdfs:range xsd:string ;
                           <http://www.w3.og/2003/06/sw-vocab-status/ns#term_status> "stable" ;
@@ -618,7 +618,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://purl.org/edifact/ontology#contactPersonPurchasingDepartment
 :contactPersonPurchasingDepartment rdf:type owl:DatatypeProperty ;
-                                   rdfs:subPropertyOf :contactPersom ;
+                                   rdfs:subPropertyOf :contactPerson ;
                                    rdfs:domain :FormalOrganization ;
                                    rdfs:range xsd:string ;
                                    <http://www.w3.og/2003/06/sw-vocab-status/ns#term_status> "stable" ;
@@ -631,7 +631,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://purl.org/edifact/ontology#contactPersonReceivableAccounting
 :contactPersonReceivableAccounting rdf:type owl:DatatypeProperty ;
-                                   rdfs:subPropertyOf :contactPersom ;
+                                   rdfs:subPropertyOf :contactPerson ;
                                    rdfs:domain :FormalOrganization ;
                                    rdfs:range xsd:string ;
                                    <http://www.w3.og/2003/06/sw-vocab-status/ns#term_status> "stable" ;
@@ -644,7 +644,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://purl.org/edifact/ontology#contactPersonSalesDepartment
 :contactPersonSalesDepartment rdf:type owl:DatatypeProperty ;
-                              rdfs:subPropertyOf :contactPersom ;
+                              rdfs:subPropertyOf :contactPerson ;
                               rdfs:domain :FormalOrganization ;
                               rdfs:range xsd:string ;
                               <http://www.w3.og/2003/06/sw-vocab-status/ns#term_status> "stable" ;
@@ -657,7 +657,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://purl.org/edifact/ontology#contactPersonTelefonNumber
 :contactPersonTelefonNumber rdf:type owl:DatatypeProperty ;
-                            rdfs:subPropertyOf :contactPersom ;
+                            rdfs:subPropertyOf :contactPerson ;
                             rdfs:domain :FormalOrganization ;
                             rdfs:range xsd:string ;
                             <http://www.w3.og/2003/06/sw-vocab-status/ns#term_status> "stable" ;
@@ -670,7 +670,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://purl.org/edifact/ontology#contactPersonTelexNumber
 :contactPersonTelexNumber rdf:type owl:DatatypeProperty ;
-                          rdfs:subPropertyOf :contactPersom ;
+                          rdfs:subPropertyOf :contactPerson ;
                           rdfs:domain :FormalOrganization ;
                           rdfs:range xsd:string ;
                           <http://www.w3.og/2003/06/sw-vocab-status/ns#term_status> "stable" ;
@@ -683,7 +683,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://purl.org/edifact/ontology#contactPersonX400Number
 :contactPersonX400Number rdf:type owl:DatatypeProperty ;
-                         rdfs:subPropertyOf :contactPersom ;
+                         rdfs:subPropertyOf :contactPerson ;
                          rdfs:domain :FormalOrganization ;
                          rdfs:range xsd:string ;
                          <http://www.w3.og/2003/06/sw-vocab-status/ns#term_status> "stable" ;
@@ -1758,7 +1758,8 @@ xsd:date rdf:type rdfs:Datatype .
             <http://www.w3.og/2003/06/sw-vocab-status/ns#term_status> "stable" ;
             rdfs:comment "Due date" ;
             rdfs:isDefinedBy : ;
-            rdfs:label "hasDueDate"@en .
+            rdfs:label "hasDueDate"@en ;
+            :seeXML "Zahlungsfaelligkeitsdatum" .
 
 
 ###  https://purl.org/edifact/ontology#hasDueDeductionAmount

@@ -759,7 +759,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#contactDepartmentPerson">
-        <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#contactPersom"/>
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#contactPerson"/>
         <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <ns1:term_status>stable</ns1:term_status>
@@ -771,10 +771,10 @@
     
 
 
-    <!-- https://purl.org/edifact/ontology#contactPersom -->
+    <!-- https://purl.org/edifact/ontology#contactPerson -->
 
 
-    <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#contactPersom">
+    <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#contactPerson">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -790,7 +790,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#contactPersonAccounting">
-        <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#contactPersom"/>
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#contactPerson"/>
         <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <ns1:term_status>stable</ns1:term_status>
@@ -807,7 +807,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#contactPersonCreditorAccounting">
-        <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#contactPersom"/>
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#contactPerson"/>
         <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <ns1:term_status>stable</ns1:term_status>
@@ -824,7 +824,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#contactPersonEmailAddress">
-        <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#contactPersom"/>
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#contactPerson"/>
         <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <ns1:term_status>stable</ns1:term_status>
@@ -841,7 +841,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#contactPersonFaxNumber">
-        <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#contactPersom"/>
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#contactPerson"/>
         <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <ns1:term_status>stable</ns1:term_status>
@@ -858,7 +858,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#contactPersonIncomingGoods">
-        <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#contactPersom"/>
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#contactPerson"/>
         <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <ns1:term_status>stable</ns1:term_status>
@@ -875,7 +875,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#contactPersonInformation">
-        <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#contactPersom"/>
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#contactPerson"/>
         <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <ns1:term_status>stable</ns1:term_status>
@@ -892,7 +892,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#contactPersonPurchasingDepartment">
-        <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#contactPersom"/>
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#contactPerson"/>
         <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <ns1:term_status>stable</ns1:term_status>
@@ -909,7 +909,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#contactPersonReceivableAccounting">
-        <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#contactPersom"/>
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#contactPerson"/>
         <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <ns1:term_status>stable</ns1:term_status>
@@ -926,7 +926,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#contactPersonSalesDepartment">
-        <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#contactPersom"/>
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#contactPerson"/>
         <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <ns1:term_status>stable</ns1:term_status>
@@ -943,7 +943,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#contactPersonTelefonNumber">
-        <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#contactPersom"/>
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#contactPerson"/>
         <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <ns1:term_status>stable</ns1:term_status>
@@ -960,7 +960,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#contactPersonTelexNumber">
-        <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#contactPersom"/>
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#contactPerson"/>
         <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <ns1:term_status>stable</ns1:term_status>
@@ -977,7 +977,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://purl.org/edifact/ontology#contactPersonX400Number">
-        <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#contactPersom"/>
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/edifact/ontology#contactPerson"/>
         <rdfs:domain rdf:resource="https://purl.org/edifact/ontology#FormalOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <ns1:term_status>stable</ns1:term_status>
@@ -2409,6 +2409,7 @@
         <rdfs:comment>Due date</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://purl.org/edifact/ontology#"/>
         <rdfs:label xml:lang="en">hasDueDate</rdfs:label>
+        <seeXML>Zahlungsfaelligkeitsdatum</seeXML>
     </owl:DatatypeProperty>
     
 

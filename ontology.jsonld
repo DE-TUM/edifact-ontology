@@ -1370,13 +1370,13 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://purl.org/edifact/ontology#contactPersom"
+    "@id" : "https://purl.org/edifact/ontology#contactPerson"
   } ],
   "https://purl.org/edifact/ontology#seeXML" : [ {
     "@value" : "D_3412"
   } ]
 }, {
-  "@id" : "https://purl.org/edifact/ontology#contactPersom",
+  "@id" : "https://purl.org/edifact/ontology#contactPerson",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.og/2003/06/sw-vocab-status/ns#term_status" : [ {
     "@value" : "stable"
@@ -1423,7 +1423,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://purl.org/edifact/ontology#contactPersom"
+    "@id" : "https://purl.org/edifact/ontology#contactPerson"
   } ],
   "https://purl.org/edifact/ontology#seeEDIFACT" : [ {
     "@value" : "CTA+AD"
@@ -1454,7 +1454,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://purl.org/edifact/ontology#contactPersom"
+    "@id" : "https://purl.org/edifact/ontology#contactPerson"
   } ],
   "https://purl.org/edifact/ontology#seeEDIFACT" : [ {
     "@value" : "CTA+AP"
@@ -1485,7 +1485,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://purl.org/edifact/ontology#contactPersom"
+    "@id" : "https://purl.org/edifact/ontology#contactPerson"
   } ],
   "https://purl.org/edifact/ontology#seeEDIFACT" : [ {
     "@value" : "COM+:EM"
@@ -1516,7 +1516,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://purl.org/edifact/ontology#contactPersom"
+    "@id" : "https://purl.org/edifact/ontology#contactPerson"
   } ],
   "https://purl.org/edifact/ontology#seeEDIFACT" : [ {
     "@value" : "COM+:FX"
@@ -1547,7 +1547,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://purl.org/edifact/ontology#contactPersom"
+    "@id" : "https://purl.org/edifact/ontology#contactPerson"
   } ],
   "https://purl.org/edifact/ontology#seeEDIFACT" : [ {
     "@value" : "CTA+GR"
@@ -1578,7 +1578,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://purl.org/edifact/ontology#contactPersom"
+    "@id" : "https://purl.org/edifact/ontology#contactPerson"
   } ],
   "https://purl.org/edifact/ontology#seeEDIFACT" : [ {
     "@value" : "COM+IC"
@@ -1609,7 +1609,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://purl.org/edifact/ontology#contactPersom"
+    "@id" : "https://purl.org/edifact/ontology#contactPerson"
   } ],
   "https://purl.org/edifact/ontology#seeEDIFACT" : [ {
     "@value" : "CTA+PD"
@@ -1640,7 +1640,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://purl.org/edifact/ontology#contactPersom"
+    "@id" : "https://purl.org/edifact/ontology#contactPerson"
   } ],
   "https://purl.org/edifact/ontology#seeEDIFACT" : [ {
     "@value" : "CTA+AR"
@@ -1671,7 +1671,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://purl.org/edifact/ontology#contactPersom"
+    "@id" : "https://purl.org/edifact/ontology#contactPerson"
   } ],
   "https://purl.org/edifact/ontology#seeEDIFACT" : [ {
     "@value" : "CTA+SR"
@@ -1702,7 +1702,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://purl.org/edifact/ontology#contactPersom"
+    "@id" : "https://purl.org/edifact/ontology#contactPerson"
   } ],
   "https://purl.org/edifact/ontology#seeEDIFACT" : [ {
     "@value" : "COM+:TE"
@@ -1733,7 +1733,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://purl.org/edifact/ontology#contactPersom"
+    "@id" : "https://purl.org/edifact/ontology#contactPerson"
   } ],
   "https://purl.org/edifact/ontology#seeEDIFACT" : [ {
     "@value" : "COM+:TL"
@@ -1764,7 +1764,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://purl.org/edifact/ontology#contactPersom"
+    "@id" : "https://purl.org/edifact/ontology#contactPerson"
   } ],
   "https://purl.org/edifact/ontology#seeEDIFACT" : [ {
     "@value" : "COM+:XF"
@@ -4292,6 +4292,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/dc/elements/1.1/date"
+  } ],
+  "https://purl.org/edifact/ontology#seeXML" : [ {
+    "@value" : "Zahlungsfaelligkeitsdatum"
   } ]
 }, {
   "@id" : "https://purl.org/edifact/ontology#hasDueDeductionAmount",
